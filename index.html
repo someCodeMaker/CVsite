@@ -1,14 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/sanitize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Denys Hudzenko</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Denys Hudzenko</title>
-</head>
+  <body>
+    <!-- Header section -->
+    <header class="container">
+      <nav class="header-nav">
+        <ul>
+          <li>
+            <a href="index.html"><img src="/img/logo.svg" alt="logo" /></a>
+          </li>
+          <li><a href="#aboutMe">About Me</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#cases">Cases</a></li>
+        </ul>
+      </nav>
+      <section class="header-contact">
+        <ul>
+          <li>
+            <p>CV</p>
+            <a href="#" download>
+              <img src="/img/download_icon.svg" alt="download" />
+            </a>
+          </li>
+          <li><button>Contact Me</button></li>
+        </ul>
+      </section>
+    </header>
 
-<body>
+    <!-- Main section -->
+    <main class="container">
+      <!-- hero -->
+      <section class="hero">
+        <div class="hero-top">
+          <h1 class="heto-top__title">Transform into exceptional your ideas websites</h1>
+          <img class="hero-top__image" src="/img/laptop.png" alt="laptop" />
+          <div class="hero-top__abstract">
+            <img src="/img/hero_abstract.png" alt="abstract_1" />
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <h2>MY MAIN PROPOSE:</h2>
+          <div class="hero-bottom__right">
+            <p>
+              transform ideas into vibrant and interactive online experiences by harnessing the
+              power of innovation and an unbridled passion for coding. I’m driven to not just meet
+              but exceed client’s expectation.
+            </p>
+            <button>GET A CONSULTATION</button>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <!-- About Me -->
+      <section class="about">
+        <h2 class="about--title">
+          About (<img class="about-title__img" src="/img/hand.svg" alt="hand" />) Me
+        </h2>
+        <div class="about-content">
+          <p class="about-content__text">
+            My passion for coding began at university, where I studied Computer Science. After that,
+            I had experience in various fields, including management positions, but I returned to
+            what my soul is passionate about and have been working as a freelance frontend developer
+            for several years.
+          </p>
+          <img src="/img/my_photo.jpg" alt="me" class="about-content__photo" />
+          <h3>PROGRAMMING LANGUAGE IN USE</h3>
+          <ul class="about-content__list skill-list">
+            <li class="skill-list__item"><button id="skill1">HTML</button></li>
+            <li class="skill-list__item"><button id="skill2">CSS</button></li>
+            <li class="skill-list__item"><button id="skill3">SCSS</button></li>
+            <li class="skill-list__item"><button id="skill4">JavaScript</button></li>
+            <li class="skill-list__item"><button id="skill5">React</button></li>
+            <li class="skill-list__item"><button id="skill6">Redux</button></li>
+            <li class="skill-list__item"><button id="skill7">TypeScript</button></li>
+            <li class="skill-list__item"><button id="skill8">Gulp</button></li>
+            <li class="skill-list__item"><button id="skill9">NPM</button></li>
+            <li class="skill-list__item"><button id="skill10">Git</button></li>
+          </ul>
+        </div>
+      </section>
 
+      <!-- Advantages of cooperating -->
+      <section class="cooperating">
+        <h2 class="cooperating-title">advantages of cooperating</h2>
+        <dl class="cooperation-list">
+          <div class="cooperation-list__container">
+            <span class="cooperation-list__number">1.</span>
+            <dt class="cooperation-list__def">Tailored Solutions</dt>
+            <hr />
+            <dd class="cooperation-list__text">
+              crafting bespoke web solutions tailored to each client's unique requirements and
+              objectives.
+            </dd>
+          </div>
+          <div class="cooperation-list__container">
+            <span class="cooperation-list__number">2.</span>
+            <dt class="cooperation-list__def">Quality and Precision</dt>
+            <hr />
+            <dd class="cooperation-list__text">attention to details is paramount for me.</dd>
+          </div>
+          <div class="cooperation-list__container">
+            <span class="cooperation-list__number">3.</span>
+            <dt class="cooperation-list__def">communication</dt>
+            <hr />
+            <dd class="cooperation-list__text">
+              collaborate closely with clients, keeping them informed at every stage and
+              incorporating their feedback and suggestions to ensure complete satisfaction.
+            </dd>
+          </div>
+          <div class="cooperation-list__container">
+            <span class="cooperation-list__number">4.</span>
+            <dt class="cooperation-list__def">Timely Delivery</dt>
+            <hr />
+            <dd class="cooperation-list__text">
+              clients can be sure on delivering projects on schedule, without compromising on
+              quality or efficiency.
+            </dd>
+          </div>
+          <div class="cooperation-list__container">
+            <span class="cooperation-list__number">5.</span>
+            <dt class="cooperation-list__def">Continuous Support</dt>
+            <hr />
+            <dd class="cooperation-list__text">
+              ongoing support and maintenance services to ensure the smooth operation of the
+              website.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Services -->
+      <section class="services">
+        <h2 class="services-title">services</h2>
+        <dl class="services-list">
+          <div class="services-list__container">
+            <img src="/img/abstract2.png" alt="abstract_2" class="services-list__img" />
+            <dt class="services-list__title">LANDING PAGE</dt>
+            <dd class="services-list__text">
+              a targeted website for a specific product or service that will attract maximum
+              customer attention.
+            </dd>
+            <span>01</span>
+          </div>
+          <div class="services-list__container">
+            <img src="/img/services_abstract_2.png" alt="abstract_3" class="services-list__img" />
+            <dt class="services-list__title">E-Commerce</dt>
+            <dd class="services-list__text">
+              a modern and convenient website for your store, which will allow you to sell your
+              product quickly and efficiently.
+            </dd>
+            <span>02</span>
+          </div>
+          <div class="services-list__container">
+            <img src="/img/services_abstract_3.png" alt="abstract_4" class="services-list__img" />
+            <dt class="services-list__title">corporate site</dt>
+            <dd class="services-list__text">
+              the type of website that will enhance your company's image and introduce customers to
+              your services.
+            </dd>
+            <span>03</span>
+          </div>
+        </dl>
+        <button class="services-button">
+          <a href="#" class="services-button__link">discuss your project</a>
+        </button>
+      </section>
+
+      <!-- awareness -->
+      <section class="awareness">
+        <p class="awareness-text">
+          if (<img src="/img/elipse1.jpg" alt="elipse1" class="awareness-text__img" /><img
+            src="/img/elipse2.png"
+            alt="elipse2"
+            class="awareness-text__img"
+          />
+          ) it'll <img src="/img/arrow.svg" alt="arrow" /> awareness
+        </p>
+        <hr />
+      </section>
+
+      <!-- Projects -->
+      <section class="projects">
+        <h2 class="projects-title">
+          project <img src="/img/heart.svg" alt="heart" class="project-title__img" /> i'm proud of
+        </h2>
+        <ul class="project-list">
+          <li>
+            <div class="project-list__item project-item">
+              <h4 class="project-item__title">heil’s furniture</h4>
+              <p class="project-item__text">corporate website for modern furniture</p>
+              <img src="/img/proj1.jpg" alt="case1" class="project-img" />
+              <img src="/img/corner_arrow.svg" alt="arrow" class="project-icon" />
+            </div>
+          </li>
+          <li>
+            <div class="project-list__item project-item">
+              <h4 class="project-item__title">physics workshop</h4>
+              <p class="project-item__text">landing page for announcing the event</p>
+              <img src="/img/proj2.jpg" alt="case2" class="project-item__img" /><img
+                src="/img/corner_arrow.svg"
+                alt="arrow"
+                class="project-icon"
+              />
+            </div>
+          </li>
+          <li>
+            <div class="project-list__item project-item">
+              <h4 class="project-item__title">Yarny shop</h4>
+              <p class="project-item__text">e-commerce for pet’s clothes shop</p>
+              <img src="/img/proj3.jpg" alt="case3" class="project-item__img" /><img
+                src="/img/corner_arrow.svg"
+                alt="arrow"
+                class="project-icon"
+              />
+            </div>
+          </li>
+          <li>
+            <div class="project-list__item project-item">
+              <h4 class="project-item__title">magic of goodness</h4>
+              <p class="project-item__text">corporate website for charity foundation</p>
+              <img src="/img/proj4.jpg" alt="case4" class="project-item__img" /><img
+                src="/img/corner_arrow.svg"
+                alt="arrow"
+                class="project-icon"
+              />
+            </div>
+          </li>
+        </ul>
+        <p>MORE CASE SOON...</p>
+      </section>
+
+      <!-- Discussion -->
+      <section class="discussion">
+        <div class="discussion-left">
+          <img src="/img/discussion_abstract.jpg" alt="abstract" class="discussion-left__img" />
+        </div>
+        <div class="discussion-right">
+          <div>
+            <h2>
+              lets discuss your ideas (
+              <img src="/img/lamp.svg" alt="Lmp" class="discussion-right__icon" />)
+            </h2>
+            <p>Fill out the form and I’ll contact you as soon as possible.</p>
+          </div>
+          <form action="POST" class="discussion-right__form">
+            <input type="text" name="name" id="name" />
+            <input type="email" name="email" id="email" />
+            <label for="subject">Choose a car:</label>
+            <select id="subject" name="subject">
+              <option value="lending page">lending page</option>
+              <option value="e-commerce">e-commerce</option>
+              <option value="corporate website">corporate website</option>
+            </select>
+            <input type="button" value="submit" />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="/img/logo.svg" alt="logo" class="footer-logo__img" />
+        <p><span><</span> Turning code into creative solutions <span>></span></p>
+      </div>
+      <nav class="footer-nav">
+        <ul class="footer-nav__list footer-list">
+          <li class="footer-list__item"><a href="#about">About Me</a></li>
+          <li class="footer-list__item"><a href="#services">Services</a></li>
+          <li class="footer-list__item"><a href="#cases">Cases</a></li>
+          <li class="footer-list__item">CV <img src="/img/download_icon.svg" alt="download" /></li>
+        </ul>
+      </nav>
+      <ul class="footer-contacts">
+        <li class="footer-contact__item">
+          <a href="mailto:denyshudzenkouk@gmail.com">denyshudzenkouk@gmail.com</a>
+        </li>
+        <li class="footer-contact__item"><a href="tel:+447871855007">+447871855007</a></li>
+      </ul>
+      <ul class="footer-social">
+        <li class="footer-social__item">
+          <a href="mailto:denyshudzenkouk@gmail.com">denyshudzenkouk@gmail.com</a>
+        </li>
+        <li class="footer-social__item"><a href="">+447871855007</a></li>
+      </ul>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
