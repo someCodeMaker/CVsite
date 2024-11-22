@@ -1,0 +1,55 @@
+@import "base";
+
+.header-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 60px;
+  margin-bottom: 125px;
+
+  &__logo {
+    flex-basis: 20%;
+  }
+
+  &__list {
+    display: flex;
+    flex-basis: 60%;
+
+    li {
+      margin-right: 15%;
+    }
+  }
+
+  .header-contacts {
+    display: flex;
+    align-items: center;
+    flex-basis: 20%;
+    justify-content: flex-end;
+
+    &__button {
+      width: 187px;
+      height: 52px;
+      border-radius: 32px;
+      margin-left: 45px;
+      border-style: none;
+
+      a {
+        color: $bg-color;
+      }
+
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      color: $bg-color;
+
+      p {
+        color: $main-text-color;
+      }
+    }
+
+
+  }
+}

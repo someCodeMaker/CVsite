@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(/fonts/SpaceGrotesk-Medium.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Arupala Grotesk";
+  src: url(/fonts/ArupalaGroteskTrial-Medium.ttf) format("truetype");
+}
