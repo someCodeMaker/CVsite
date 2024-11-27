@@ -1,0 +1,42 @@
+.section-discussion {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  gap: 20px;
+  background-image: url("../../img/discussion_abstract.png");
+  position: relative;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+
+
+  &__container {
+    flex-basis: 50%;
+
+
+  }
+
+  &__title {
+    text-align: end;
+    margin-bottom: 20px;
+
+
+    &-span {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    &-icon {
+      display: inline-block;
+      position: relative;
+      top: -10px;
+    }
+
+    &-text {
+      margin-bottom: 80px;
+      text-align: end;
+    }
+  }
+}

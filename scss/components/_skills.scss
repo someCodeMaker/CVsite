@@ -1,0 +1,18 @@
+.skill-list {
+  display: flex;
+  flex-basis: 30%;
+  flex-wrap: wrap;
+
+  &__item {
+    &-button {
+      color: $main-color;
+      padding: 16px 46px;
+      background-color: $bg-form-color;
+      border-radius: 40px;
+      border: 1px $main-color solid;
+      gap: 4px;
+
+    }
+  }
+
+}

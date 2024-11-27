@@ -1,40 +1,32 @@
-@import "base";
-@import "header";
-@import "hero";
-@import "about";
-@import "cooperating";
-@import "awareness";
-@import "discussion";
-@import "projects";
-@import "services";
-@import "footer";
-@import "media";
-
-body {
-  background-color: $bg-color;
-  padding: 50px 50px 120px 50px;
-  color: $main-text-color;
-  font-family: $text-font;
-  font-weight: 400;
-  font-size: 20px;
-
-}
+@import '../scss/utils/variables';
+@import '../scss/utils/fonts';
+@import '../scss/utils/helpers';
+@import '../scss/utils/mixins';
 
 
-a {
-  color: $main-text-color;
-}
+@import '../scss/base/base';
 
-ul {
-  list-style: none;
+@import '../scss/components/container';
+@import '../scss/components/forms';
+@import '../scss/components/title';
+@import '../scss/components/links';
+@import '../scss/components/input';
+@import '../scss/components/buttons';
+@import '../scss/components/section';
+@import '../scss/components/logo';
+@import '../scss/components/color';
+@import '../scss/components/skills';
 
-}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: $title-font;
-  text-transform: uppercase;
-}
+
+@import '../scss/layouts/header';
+@import '../scss/layouts/hero';
+@import '../scss/layouts/about';
+@import '../scss/layouts/cooperating';
+@import '../scss/layouts/services';
+@import '../scss/layouts/awareness';
+@import '../scss/layouts/projects';
+@import '../scss/layouts/discussion';
+@import '../scss/layouts/footer';
+@import '../scss/layouts/modal';
+@import '../scss/layouts/media';

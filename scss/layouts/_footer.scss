@@ -1,0 +1,92 @@
+.footer {
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 80px;
+  font-weight: lighter;
+  gap: 40px;
+  flex-grow: 1;
+
+
+  &-logo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+
+    .logo {
+      margin-bottom: 48px;
+    }
+
+    span {
+      color: $main-color;
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-basis: calc(50% - 20px);
+    gap: 20px;
+
+
+    .footer-list {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 26px;
+    }
+
+  }
+
+
+
+  &-connects {
+    display: flex;
+    flex-basis: calc(50% - 20px);
+    gap: 20px;
+
+    .footer-contacts {
+      flex-basis: calc(50% - 10px);
+
+    }
+
+    .footer-social {
+      flex-basis: calc(50% - 10px);
+    }
+  }
+
+  &-comunication {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-around;
+
+    p {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+
+
+  }
+
+  .comunication-link {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .comunication-icon {
+    margin-right: 8px;
+  }
+}
+
+// copyrights
+.copyrights {
+  font-size: 12px;
+  color: $main-text-color;
+  text-align: center;
+
+  i,
+  span {
+    color: $main-color;
+  }
+}

@@ -3,362 +3,592 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Denys Hudzenko</title>
   </head>
 
   <body>
     <!-- Header section -->
-    <header class="container">
-      <nav class="header-nav">
-        <div class="header-nav__logo">
-          <a href="index.html">
+    <header class="header" id="header">
+      <div class="section-header container">
+        <nav class="section-header__nav">
+          <div class="section-header__nav-logo logo">
+            <a href="index.html" class="link">
+              <img src="/img/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <ul class="section-header__nav-list">
+            <li class="section-header__nav-item"><a class="link" href="#about">About Me</a></li>
+            <li class="section-header__nav-item"><a class="link" href="#services">Services</a></li>
+            <li class="section-header__nav-item"><a class="link" href="#projects">Cases</a></li>
+          </ul>
+        </nav>
+        <div class="section-header__contacts">
+          <a class="section-header__contacts-link link" href="#" download>
+            <span class="section-header__contacts-link_text">CV</span>
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="113"
-              height="60"
-              viewBox="0 0 113 60"
-              fill="none"
-            >
-              <path
-                d="M1.92 53V36.2H3.936V43.664H11.808V36.2H13.824V53H11.808V45.488H3.936V53H1.92ZM21.99 53.216C21.142 53.216 20.358 53.032 19.638 52.664C18.934 52.296 18.374 51.752 17.958 51.032C17.558 50.296 17.358 49.408 17.358 48.368V41.264H19.254V48.224C19.254 49.392 19.542 50.24 20.118 50.768C20.71 51.296 21.502 51.56 22.494 51.56C23.614 51.56 24.534 51.192 25.254 50.456C25.974 49.72 26.334 48.624 26.334 47.168V41.264H28.23V53H26.382V51.008H26.046C25.79 51.568 25.35 52.08 24.726 52.544C24.102 52.992 23.19 53.216 21.99 53.216ZM36.9253 53.336C35.9173 53.336 34.9893 53.096 34.1413 52.616C33.2933 52.136 32.6213 51.44 32.1253 50.528C31.6293 49.616 31.3813 48.536 31.3813 47.288V46.976C31.3813 45.728 31.6293 44.656 32.1253 43.76C32.6213 42.848 33.2853 42.152 34.1173 41.672C34.9653 41.176 35.9013 40.928 36.9253 40.928C37.7413 40.928 38.4293 41.04 38.9893 41.264C39.5653 41.472 40.0293 41.744 40.3813 42.08C40.7333 42.4 41.0053 42.744 41.1973 43.112H41.5333V36.2H43.4293V53H41.5813V51.056H41.2453C40.9253 51.648 40.4293 52.176 39.7573 52.64C39.0853 53.104 38.1413 53.336 36.9253 53.336ZM37.4293 51.656C38.6453 51.656 39.6293 51.272 40.3813 50.504C41.1493 49.72 41.5333 48.632 41.5333 47.24V47.024C41.5333 45.632 41.1493 44.552 40.3813 43.784C39.6293 43 38.6453 42.608 37.4293 42.608C36.2293 42.608 35.2373 43 34.4533 43.784C33.6853 44.552 33.3013 45.632 33.3013 47.024V47.24C33.3013 48.632 33.6853 49.72 34.4533 50.504C35.2373 51.272 36.2293 51.656 37.4293 51.656ZM46.6346 53V50.552L54.0986 43.184V42.92H46.8746V41.264H56.0906V43.712L48.6026 51.08V51.368H56.2826V53H46.6346ZM64.3455 53.336C63.1615 53.336 62.1215 53.088 61.2255 52.592C60.3295 52.08 59.6335 51.368 59.1375 50.456C58.6415 49.544 58.3935 48.488 58.3935 47.288V47C58.3935 45.784 58.6415 44.72 59.1375 43.808C59.6335 42.896 60.3215 42.192 61.2015 41.696C62.0815 41.184 63.0895 40.928 64.2255 40.928C65.3295 40.928 66.3055 41.168 67.1535 41.648C68.0015 42.112 68.6655 42.784 69.1455 43.664C69.6255 44.544 69.8655 45.576 69.8655 46.76V47.624H60.2895C60.3375 48.888 60.7455 49.88 61.5135 50.6C62.2815 51.304 63.2415 51.656 64.3935 51.656C65.4015 51.656 66.1775 51.424 66.7215 50.96C67.2655 50.496 67.6815 49.944 67.9695 49.304L69.6015 50.096C69.3615 50.592 69.0255 51.088 68.5935 51.584C68.1775 52.08 67.6255 52.496 66.9375 52.832C66.2655 53.168 65.4015 53.336 64.3455 53.336ZM60.3135 46.064H67.9455C67.8815 44.976 67.5055 44.128 66.8175 43.52C66.1455 42.912 65.2815 42.608 64.2255 42.608C63.1535 42.608 62.2735 42.912 61.5855 43.52C60.8975 44.128 60.4735 44.976 60.3135 46.064ZM72.9326 53V41.264H74.7806V43.256H75.1166C75.3726 42.696 75.8046 42.192 76.4126 41.744C77.0366 41.28 77.9486 41.048 79.1486 41.048C80.0286 41.048 80.8126 41.232 81.5006 41.6C82.2046 41.968 82.7646 42.512 83.1806 43.232C83.5966 43.952 83.8046 44.84 83.8046 45.896V53H81.9086V46.04C81.9086 44.872 81.6126 44.024 81.0206 43.496C80.4446 42.968 79.6606 42.704 78.6686 42.704C77.5326 42.704 76.6046 43.072 75.8846 43.808C75.1806 44.544 74.8286 45.64 74.8286 47.096V53H72.9326ZM87.4114 53V36.2H89.3074V46.088H89.6434L95.0194 41.264H97.6594L91.1554 46.976L97.8514 53H95.2354L89.6434 47.888H89.3074V53H87.4114ZM104.877 53.336C103.693 53.336 102.645 53.088 101.733 52.592C100.837 52.096 100.133 51.4 99.6206 50.504C99.1246 49.592 98.8766 48.52 98.8766 47.288V46.976C98.8766 45.76 99.1246 44.696 99.6206 43.784C100.133 42.872 100.837 42.168 101.733 41.672C102.645 41.176 103.693 40.928 104.877 40.928C106.061 40.928 107.101 41.176 107.997 41.672C108.909 42.168 109.613 42.872 110.109 43.784C110.621 44.696 110.877 45.76 110.877 46.976V47.288C110.877 48.52 110.621 49.592 110.109 50.504C109.613 51.4 108.909 52.096 107.997 52.592C107.101 53.088 106.061 53.336 104.877 53.336ZM104.877 51.632C106.125 51.632 107.117 51.24 107.853 50.456C108.605 49.656 108.981 48.584 108.981 47.24V47.024C108.981 45.68 108.605 44.616 107.853 43.832C107.117 43.032 106.125 42.632 104.877 42.632C103.645 42.632 102.653 43.032 101.901 43.832C101.149 44.616 100.773 45.68 100.773 47.024V47.24C100.773 48.584 101.149 49.656 101.901 50.456C102.653 51.24 103.645 51.632 104.877 51.632Z"
-                fill="#F9F9F9"
-              />
-              <path
-                d="M34.368 24.336C33.184 24.336 32.144 24.088 31.248 23.592C30.352 23.08 29.656 22.368 29.16 21.456C28.664 20.544 28.416 19.488 28.416 18.288V18C28.416 16.784 28.664 15.72 29.16 14.808C29.656 13.896 30.344 13.192 31.224 12.696C32.104 12.184 33.112 11.928 34.248 11.928C35.352 11.928 36.328 12.168 37.176 12.648C38.024 13.112 38.688 13.784 39.168 14.664C39.648 15.544 39.888 16.576 39.888 17.76V18.624H30.312C30.36 19.888 30.768 20.88 31.536 21.6C32.304 22.304 33.264 22.656 34.416 22.656C35.424 22.656 36.2 22.424 36.744 21.96C37.288 21.496 37.704 20.944 37.992 20.304L39.624 21.096C39.384 21.592 39.048 22.088 38.616 22.584C38.2 23.08 37.648 23.496 36.96 23.832C36.288 24.168 35.424 24.336 34.368 24.336ZM30.336 17.064H37.968C37.904 15.976 37.528 15.128 36.84 14.52C36.168 13.912 35.304 13.608 34.248 13.608C33.176 13.608 32.296 13.912 31.608 14.52C30.92 15.128 30.496 15.976 30.336 17.064ZM42.7151 24V12.264H44.5631V14.256H44.8991C45.1551 13.696 45.5871 13.192 46.1951 12.744C46.8191 12.28 47.7311 12.048 48.9311 12.048C49.8111 12.048 50.5951 12.232 51.2831 12.6C51.9871 12.968 52.5471 13.512 52.9631 14.232C53.3791 14.952 53.5871 15.84 53.5871 16.896V24H51.6911V17.04C51.6911 15.872 51.3951 15.024 50.8031 14.496C50.2271 13.968 49.4431 13.704 48.4511 13.704C47.3151 13.704 46.3871 14.072 45.6671 14.808C44.9631 15.544 44.6111 16.64 44.6111 18.096V24H42.7151Z"
-                fill="#F9F9F9"
-              />
-              <path
-                d="M2.12793 24.0002V22.2002H4.47993V9.0002H2.12793V7.2002H18.6799C20.8879 7.2002 22.5919 7.7602 23.7919 8.8802C25.0079 10.0002 25.6159 11.7202 25.6159 14.0402V17.1602C25.6159 19.4962 25.0079 21.2242 23.7919 22.3442C22.5919 23.4482 20.8879 24.0002 18.6799 24.0002H2.12793ZM6.49593 22.1762H18.6799C20.3119 22.1762 21.5439 21.7762 22.3759 20.9762C23.2079 20.1762 23.6239 18.9362 23.6239 17.2562V13.9682C23.6239 12.2562 23.2079 11.0082 22.3759 10.2242C21.5439 9.4402 20.3119 9.0482 18.6799 9.0482H6.49593V22.1762Z"
-                fill="#F9F9F9"
-              />
-            </svg>
-          </a>
-        </div>
-        <ul class="header-nav__list header-list">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Cases</a></li>
-        </ul>
-        <div class="header-contacts">
-          <a href="#" download class="header-contacts__link">
-            <p>CV</p>
-            <svg
+              class="download-icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              fill="none"
             >
-              <path
-                d="M12 16L7 11L8.4 9.55L11 12.15V4H13V12.15L15.6 9.55L17 11L12 16ZM6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18V15H6V18H18V15H20V18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20H6Z"
-                fill="#F9F9F9"
-              />
+              <use href="./img/icons-sprite.svg#download"></use>
             </svg>
           </a>
 
-          <button class="header-contacts__button">Contact Me</button>
+          <button class="section-header__contacts-button button">Contact Me</button>
         </div>
-      </nav>
+      </div>
     </header>
 
     <!-- Main section -->
-    <main class="container">
+    <main>
       <!-- hero -->
-      <section class="hero" id="hero">
-        <!-- title container -->
-        <!-- remake the structure of title in hero page semantic is wrong!!! -->
-        <div class="hero-top">
-          <h1 class="hero-title">
-            Transform <span class="hero-title__accent">your ideas</span>
-            <svg
-              class="title-span__img"
-              xmlns="http://www.w3.org/2000/svg"
-              width="103"
-              height="75"
-              viewBox="0 0 103 75"
-              fill="none"
-            >
-              <path
-                d="M64.2359 72.9363C64.3048 73.006 66.4166 73.5394 68.9284 74.1211C71.4406 74.7029 73.5231 75.0899 73.5566 74.9819C73.5898 74.8735 73.8497 73.1167 74.1339 71.0775C74.7049 66.9827 76.0872 62.2016 77.5644 59.2115C82.1686 49.8928 90.4294 43.7224 100.449 42.1187L103 41.7102V37.5936V33.4767L100.688 33.0858C85.5371 30.5246 75.6598 19.1099 73.8121 2.02778C73.6915 0.912335 73.5473 -3.15905e-06 73.4918 -3.15905e-06C72.9809 -3.15905e-06 64.5143 2.056 64.3542 2.21888C64.2384 2.33665 64.3246 3.38234 64.5459 4.54224C66.9959 17.3861 74.0108 27.8375 83.114 32.2075L85.2976 33.2558L40.3941 33.3379L0 33.39L0 41.7213L40.4671 41.7735L85.2647 41.8559L82.5079 43.2633C75.3562 46.9143 69.694 54.0762 66.3595 63.6892C65.4094 66.4279 63.9756 72.6715 64.2359 72.9363Z"
-                fill="#F9F9F9"
-              /></svg
-            ><br />
-            <span class="hero-title__span">into exceptional</span> <br />
-            <span class="hero-title__span">websites</span>
-            <span class="hero-title__span hero-bottom__abstract hero-abstract">
-              <img src="/img/hero_abstract.png" alt="abstract_1" class="hero-abstract__img" />
-            </span>
-          </h1>
+      <section class="hero section_margin-bottom" id="hero">
+        <div class="container">
+          <div class="section-hero">
+            <div class="section-hero__top-container">
+              <h1 class="section-hero__title">
+                <span class="section-hero__title_line-one">
+                  <span>Transform</span>
+                  <span class="section-hero__title_line-one_accent main-accent">your ideas</span>
+                  <img
+                    class="section-hero__title_line-one_arrow"
+                    src="./img/title_arrow.svg"
+                    alt="arrow"
+                  />
+                </span>
+                <span class="section-hero__title_line-two">into exceptional</span>
+                <span class="section-hero__title_line-three">
+                  <span>websites</span>
+                  <span class="section-hero__title_line-three_abstract-container">
+                    <img
+                      src="/img/hero_abstract.png"
+                      alt="abstract_1"
+                      class="section-hero__title_line-three_abstract-container_icon"
+                    />
+                  </span>
+                </span>
+              </h1>
 
-          <img class="hero-top__image" src="/img/laptop.png" alt="laptop" />
-        </div>
+              <img class="section-hero__top-container-img" src="/img/laptop.png" alt="laptop" />
+            </div>
 
-        <!-- lower part of hero section -->
-        <div class="hero-bottom">
-          <h2>MY MAIN PROPOSE:</h2>
-          <div class="hero-bottom__right">
-            <p>
-              transform ideas into vibrant and interactive online experiences by harnessing the
-              power of innovation and an unbridled passion for coding. I’m driven to not just meet
-              but exceed client’s expectation.
-            </p>
-            <button>GET A CONSULTATION</button>
+            <!-- lower part of hero section -->
+            <div class="section-hero__bottom-container">
+              <h2 class="section-hero__bottom-container_left-side secondary-title">
+                MY MAIN PROPOSE:
+              </h2>
+              <div class="section-hero__bottom-container_right-side">
+                <p class="section-hero__bottom-container_text">
+                  transform ideas into vibrant and interactive online experiences by harnessing the
+                  power of innovation and an unbridled passion for coding. I’m driven to not just
+                  meet but exceed client’s expectation.
+                </p>
+                <button class="section-hero__bottom-container_button button">
+                  GET A CONSULTATION
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- title container -->
+        <!-- remake the structure of title in hero page semantic is wrong!!! -->
       </section>
 
       <!-- About Me -->
-      <section class="about" id="about">
-        <h2 class="about--title">
-          About (<img class="about-title__img" src="/img/hand.svg" alt="hand" />) Me
-        </h2>
-        <div class="about-content">
-          <p class="about-content__text">
-            My passion for coding began at university, where I studied Computer Science. After that,
-            I had experience in various fields, including management positions, but I returned to
-            what my soul is passionate about and have been working as a freelance frontend developer
-            for several years.
-          </p>
-          <img src="/img/my_photo.jpg" alt="me" class="about-content__photo" />
-          <h3>PROGRAMMING LANGUAGE IN USE</h3>
-          <ul class="about-content__list skill-list">
-            <li class="skill-list__item"><button id="skill1">HTML</button></li>
-            <li class="skill-list__item"><button id="skill2">CSS</button></li>
-            <li class="skill-list__item"><button id="skill3">SCSS</button></li>
-            <li class="skill-list__item"><button id="skill4">JavaScript</button></li>
-            <li class="skill-list__item"><button id="skill5">React</button></li>
-            <li class="skill-list__item"><button id="skill6">Redux</button></li>
-            <li class="skill-list__item"><button id="skill7">TypeScript</button></li>
-            <li class="skill-list__item"><button id="skill8">Gulp</button></li>
-            <li class="skill-list__item"><button id="skill9">NPM</button></li>
-            <li class="skill-list__item"><button id="skill10">Git</button></li>
-          </ul>
+      <section class="about section_margin-bottom" id="about">
+        <div class="container">
+          <div class="section-about">
+            <h2 class="section-about__title title">
+              <span class="section-about__title_first-line">About</span>
+              <span class="section-about__title_second-line">
+                <span class="section-about__title_second-line_icon"
+                  >(<svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <use href="./img/icons-sprite.svg#hand"></use></svg
+                  >)</span
+                >
+                Me
+              </span>
+            </h2>
+            <p class="section-about__text">
+              My passion for coding began at university, where I studied Computer Science. After
+              that, I had experience in various fields, including management positions, but I
+              returned to what my soul is passionate about and have been working as a freelance
+              frontend developer for several years.
+            </p>
+            <h3 class="section-about__skills-title secondary-title">PROGRAMMING LANGUAGE I USE</h3>
+            <div class="section-about__skills-container">
+              <img src="/img/my_photo.jpg" alt="me" class="section-about__skills-container-photo" />
+              <ul class="section-about__skills-list skill-list">
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-html">HTML</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-css">CSS</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-scss">SCSS</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-js">JavaScript</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-react">React</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="kill-redux">Redux</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-ts">TypeScript</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-gulp">Gulp</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-npm">NPM</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-git">Git</button>
+                </li>
+                <li class="skill-list__item">
+                  <button class="skill-list__item-button" id="skill-bem">BEM</button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Advantages of cooperating -->
-      <section class="cooperating" id="cooperating">
-        <h2 class="cooperating-title">advantages of cooperating</h2>
-        <ul class="cooperation-list">
-          <li class="cooperating-list__item cooperating-item">
-            <p class="cooperation-item__number">1.</p>
-            <p class="cooperation-item__title">Tailored Solutions</p>
-            <hr />
-            <p class="cooperation-item__text">
-              crafting bespoke web solutions tailored to each client's unique requirements and
-              objectives.
-            </p>
-          </li>
-          <li class="cooperating-list__item cooperating-item">
-            <p class="cooperation-item__number">2.</p>
-            <p class="cooperation-item__title">Quality and Precision</p>
-            <hr />
-            <p class="cooperation-item__text">attention to details is paramount for me.</p>
-          </li>
-          <li class="cooperating-list__item cooperating-item">
-            <p class="cooperation-item__number">3.</p>
-            <p class="cooperation-item__title">Communication</p>
-            <hr />
-            <p class="cooperation-item__text">
-              collaborate closely with clients, keeping them informed at every stage and
-              incorporating their feedback and suggestions to ensure complete satisfaction.
-            </p>
-          </li>
-          <li class="cooperating-list__item cooperating-item">
-            <p class="cooperation-item__number">4.</p>
-            <p class="cooperation-item__title">Timely Delivery</p>
-            <hr />
-            <p class="cooperation-item__text">
-              clients can be sure on delivering projects on schedule, without compromising on
-              quality or efficiency.
-            </p>
-          </li>
-          <li class="cooperating-list__item cooperating-item">
-            <p class="cooperation-item__number">5.</p>
-            <p class="cooperation-item__title">Continuous Support</p>
-            <hr />
-            <p class="cooperation-item__text">
-              ongoing support and maintenance services to ensure the smooth operation of the
-              website.
-            </p>
-          </li>
-        </ul>
+      <section class="cooperating section_margin-bottom" id="cooperating">
+        <div class="container">
+          <div class="section-cooperating">
+            <h2 class="section-cooperating__title title">
+              <span class="section-cooperating__title_span">advantages of</span>
+              <span class="section-cooperating__title_span">cooperating</span>
+            </h2>
+            <ul class="section-cooperating__list">
+              <li class="section-cooperating__list-item">
+                <span class="section-cooperating__list-item_number">1.</span>
+                <span class="section-cooperating__list-item_title">Tailored Solutions</span>
+                <span class="section-cooperating__list-item_text">
+                  crafting bespoke web solutions tailored to each client's unique requirements and
+                  objectives.
+                </span>
+              </li>
+              <li class="section-cooperating__list-item">
+                <span class="section-cooperating__list-item_number">2.</span>
+                <span class="section-cooperating__list-item_title">Quality and Precision</span>
+                <span class="section-cooperating__list-item_text"
+                  >attention to details is paramount for me.</span
+                >
+              </li>
+              <li class="section-cooperating__list-item">
+                <span class="section-cooperating__list-item_number">3.</span>
+                <span class="section-cooperating__list-item_title">Communica- <br />tion</span>
+                <span class="section-cooperating__list-item_text">
+                  collaborate closely with clients, keeping them informed at every stage and
+                  incorporating their feedback and suggestions to ensure complete satisfaction.
+                </span>
+              </li>
+              <li class="section-cooperating__list-item">
+                <span class="section-cooperating__list-item_number">4.</span>
+                <span class="section-cooperating__list-item_title">Timely <br />Delivery</span>
+                <span class="section-cooperating__list-item_text">
+                  clients can be sure on delivering projects on schedule, without compromising on
+                  quality or efficiency.
+                </span>
+              </li>
+              <li class="section-cooperating__list-item">
+                <span class="section-cooperating__list-item_number">5.</span>
+                <span class="section-cooperating__list-item_title">Continuous Support</span>
+                <span class="section-cooperating__list-item_text">
+                  ongoing support and maintenance services to ensure the smooth operation of the
+                  website.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- Services -->
-      <section class="services" id="services">
-        <h2 class="services-title">services</h2>
-        <ul class="services-list">
-          <li class="services-list__item services-item">
-            <span>01</span>
-            <div class="services-text">
-              <h4 class="services-text__title">landing page</h4>
-              <p class="services-item__text">
-                a targeted website for a specific product or service that will attract maximum
-                customer attention
-              </p>
-            </div>
-            <img src="/img/abstract2.png" alt="services-abstract1" class="service-item__img" />
-          </li>
+      <section class="services section_margin-bottom" id="services">
+        <div class="container">
+          <div class="section-services">
+            <h2 class="section-services__title title">services</h2>
+            <ul class="section-services__list">
+              <li class="section-services__list-item">
+                <span class="section-services__list-item_number services-number">01</span>
+                <div class="section-services__list-item_text">
+                  <h4 class="section-services__list-item_text-title">landing page</h4>
+                  <p class="section-services__list-item_text-content">
+                    a targeted website for a specific product or service that will attract maximum
+                    customer attention
+                  </p>
+                </div>
+                <img
+                  src="./img/abstract2.png"
+                  alt="abstract1"
+                  class="section-services__list-item_abstract-img services-abstract"
+                />
+              </li>
 
-          <li class="services-list__item services-item">
-            <img
-              src="img/services_abstract_2.png"
-              alt="services-abstract2"
-              class="service-item__img"
-            />
-            <div class="services-text">
-              <h4 class="services-text__title">E-Commerce</h4>
-              <p class="services-item__text">
-                a modern and convenient website for your store, which will allow you to sell your
-                product quickly and efficiently.
-              </p>
-            </div>
-            <span>02</span>
-          </li>
-          <li class="services-list__item services-item">
-            <span>03</span>
-            <div class="services-text">
-              <h4 class="services-text__title">Corporate site</h4>
-              <p class="services-item__text">
-                the type of website that will enhance your company's image and introduce customers
-                to your services.
-              </p>
-            </div>
-            <img
-              src="img/services_abstract_3.png"
-              alt="services-abstract3"
-              class="service-item__img"
-            />
-          </li>
-        </ul>
+              <li class="section-services__list-item">
+                <span class="section-services__list-item_number services-number">02</span>
+                <div class="section-services__list-item_text">
+                  <h4 class="section-services__list-item_text-title">E-Commerce</h4>
+                  <p class="section-services__list-item_text-content">
+                    a modern and convenient website for your store, which will allow you to sell
+                    your product quickly and efficiently.
+                  </p>
+                  <img
+                    src="./img/services_abstract_2.png"
+                    alt="abstract2"
+                    class="section-services__list-item_abstract-img services-abstract"
+                  />
+                </div>
+              </li>
+              <li class="section-services__list-item">
+                <span class="section-services__list-item_number services-number">03</span>
+                <div class="section-services__list-item_text">
+                  <h4 class="section-services__list-item_text-title">Corporate site</h4>
+                  <p class="section-services__list-item_text-content">
+                    the type of website that will enhance your company's image and introduce
+                    customers to your services.
+                  </p>
+                </div>
+                <img
+                  src="./img/services_abstract_3.png"
+                  alt="abstract3"
+                  class="section-services__list-item_abstract-img services-abstract"
+                />
+              </li>
+            </ul>
 
-        <a href="#" class="services-button__link"> discuss your project </a>
+            <button class="section-services__button button">discuss your project</button>
+          </div>
+        </div>
+      </section>
 
-        <!-- awareness -->
-        <div class="awareness">
-          <p class="awareness-text">
-            if (<img src="/img/elipse1.jpg" alt="ellipse-1" class="awareness-text__img" /><img
-              src="/img/elipse2.png"
-              alt="ellipse-2"
-              class="awareness-text__img"
-            />
-            ) it'll <img src="/img/arrow.svg" alt="arrow" /> awareness
-          </p>
-          <hr />
+      <!-- awareness -->
+      <section class="awareness section_margin-bottom">
+        <div class="container">
+          <div class="section-awareness">
+            <div class="section-awareness__line-top">
+              <span class="section-awareness__line-top-text">
+                <span>if</span>
+                <span>
+                  (
+                  <span class="section-awareness__line-top-text_circle">
+                    <!-- <svg class="circle-one">
+                      <use href="./img/icons-sprite.svg#you"></use></svg> -->
+                  </span>
+
+                  <span class="section-awareness__line-top-text_circle"></span>
+                  )
+                </span>
+                <span> it'll</span>
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="section-awareness__icon">
+                <use href="./img/icons-sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="section-awareness__line-bottom">
+              <span class="section-awareness__line-bottom_letter">a</span>
+              <span class="section-awareness__line-bottom_letter">w</span>
+              <span class="section-awareness__line-bottom_letter">a</span>
+              <span class="section-awareness__line-bottom_letter">r</span>
+              <span class="section-awareness__line-bottom_letter">e</span>
+              <span class="section-awareness__line-bottom_letter">n</span>
+              <span class="section-awareness__line-bottom_letter">e</span>
+              <span class="section-awareness__line-bottom_letter">s</span>
+              <span class="section-awareness__line-bottom_letter">s</span>
+            </div>
+          </div>
+          <!-- <h2 class="awareness-text">
+            <span class="awareness-text__block">
+              <span>if</span>
+              <span class="awareness-text__circles">
+                <span>(</span>
+                
+                <span>)</span>
+              </span>
+              <span>it'll</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="176"
+                height="256"
+                viewBox="0 0 176 256"
+                fill="none"
+                class="awareness-icon"
+              >
+                <use href="./img/icons-sprite.svg#arrow"></use>
+              </svg>
+            </span>
+            <span class="awareness-text__block">awareness</span>
+          </h2> -->
         </div>
       </section>
 
       <!-- Projects -->
-      <section class="projects" id="projects">
-        <h2 class="projects-title">
-          project <img src="/img/heart.svg" alt="heart" class="project-title__img" /> i'm proud of
-        </h2>
-        <ul class="project-list">
-          <li>
-            <div class="project-list__item project-item">
-              <h4 class="project-item__title">heil’s furniture</h4>
-              <p class="project-item__text">corporate website for modern furniture</p>
-              <img src="/img/proj1.jpg" alt="case1" class="project-img" />
-              <img src="/img/corner_arrow.svg" alt="arrow" class="project-icon" />
-            </div>
-          </li>
-          <li>
-            <div class="project-list__item project-item">
-              <h4 class="project-item__title">physics workshop</h4>
-              <p class="project-item__text">landing page for announcing the event</p>
-              <img src="/img/proj2.jpg" alt="case2" class="project-item__img" /><img
-                src="/img/corner_arrow.svg"
-                alt="arrow"
-                class="project-icon"
-              />
-            </div>
-          </li>
-          <li>
-            <div class="project-list__item project-item">
-              <h4 class="project-item__title">Yarny shop</h4>
-              <p class="project-item__text">e-commerce for pet’s clothes shop</p>
-              <img src="/img/proj3.jpg" alt="case3" class="project-item__img" /><img
-                src="/img/corner_arrow.svg"
-                alt="arrow"
-                class="project-icon"
-              />
-            </div>
-          </li>
-          <li>
-            <div class="project-list__item project-item">
-              <h4 class="project-item__title">magic of goodness</h4>
-              <p class="project-item__text">corporate website for charity foundation</p>
-              <img src="/img/proj4.jpg" alt="case4" class="project-item__img" /><img
-                src="/img/corner_arrow.svg"
-                alt="arrow"
-                class="project-icon"
-              />
-            </div>
-          </li>
-        </ul>
-        <p>MORE CASE SOON...</p>
+      <section class="projects section_margin-bottom" id="projects">
+        <div class="container">
+          <h2 class="projects-title title">
+            <span class="projects-title__top"
+              >projects
+              <span class="project-top__icon"
+                >(<svg
+                  width="44"
+                  height="35"
+                  viewBox="0 0 44 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./img/icons-sprite.svg#heart"></use></svg
+                >)</span
+              >
+            </span>
+            <span class="projects-title__bottom">i'm proud of</span>
+          </h2>
+          <ul class="projects-list">
+            <li class="projects-list__item">
+              <a href="" class="projects-item projects-item__one">
+                <h4 class="projects-item__title">heil’s furniture</h4>
+                <p class="projects-item__text">corporate website for modern furniture</p>
+                <img src="/img/project1.png" alt="case1" class="projects-item__img" />
+                <svg
+                  class="projects-arrow"
+                  width="30"
+                  height="32"
+                  viewBox="0 0 30 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./img/icons-sprite.svg#arrow"></use></svg
+              ></a>
+            </li>
+            <li class="projects-list__item">
+              <a href="" class="projects-item projects-item__two">
+                <h4 class="projects-item__title">physics workshop</h4>
+                <p class="projects-item__text">landing page for announcing the event</p>
+                <img src="/img/project2.png" alt="case2" class="projects-item__img" />
+                <svg
+                  class="projects-arrow"
+                  width="30"
+                  height="32"
+                  viewBox="0 0 30 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./img/icons-sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="projects-list__item">
+              <a href="" class="projects-item projects-item__three">
+                <h4 class="projects-item__title">Yarny shop</h4>
+                <p class="projects-item__text">e-commerce for pet’s clothes shop</p>
+                <img src="/img/project3.png" alt="case3" class="projects-item__img" />
+                <svg
+                  class="projects-arrow"
+                  width="30"
+                  height="32"
+                  viewBox="0 0 30 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./img/icons-sprite.svg#arrow"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="projects-list__item">
+              <a href="" class="projects-item projects-item__four">
+                <h4 class="projects-item__title">magic of goodness</h4>
+                <p class="projects-item__text">corporate website for charity foundation</p>
+                <img src="/img/project4.png" alt="case4" class="projects-item__img" />
+                <svg
+                  class="projects-arrow"
+                  width="30"
+                  height="32"
+                  viewBox="0 0 30 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <use href="./img/icons-sprite.svg#arrow"></use></svg
+              ></a>
+            </li>
+          </ul>
+          <p class="projects-text secondary-title">MORE CASE SOON...</p>
+        </div>
       </section>
 
       <!-- Discussion -->
-      <section class="discussion" id="discussion">
-        <div class="discussion-left">
-          <img src="/img/discussion_abstract.jpg" alt="abstract" class="discussion-left__img" />
-        </div>
-        <div class="discussion-right">
-          <div>
-            <h2>
-              lets discuss your ideas (
-              <img src="/img/lamp.svg" alt="Lmp" class="discussion-right__icon" />)
-            </h2>
-            <p>Fill out the form and I’ll contact you as soon as possible.</p>
+      <section class="discussion section_margin-bottom" id="discussion ">
+        <div class="container">
+          <div class="section-discussion">
+            <div class="section-discussion__container">
+              <h2 class="section-discussion__title title">
+                <span>lets discuss</span>
+                <span class="section-discussion__title-span"
+                  ><span>your ideas!</span>
+                  <span class="section-discussion__title_icon">
+                    (
+                    <svg
+                      width="30"
+                      height="42"
+                      viewBox="0 0 30 42"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use href="./img/icons-sprite.svg#lamp"></use>
+                    </svg>
+                    )
+                  </span>
+                </span>
+              </h2>
+              <p class="section-discussion__title-text">
+                Fill out the form and I’ll contact you as soon as possible.
+              </p>
+
+              <form action="POST" class="form">
+                <input type="text" name="name" id="name" placeholder="Name:" />
+                <input type="email" name="email" id="email" placeholder="Email:" />
+                <select id="subject" name="subject">
+                  <option value="lending page">lending page</option>
+                  <option value="e-commerce">e-commerce</option>
+                  <option value="corporate website">corporate website</option>
+                </select>
+                <input type="button" value="submit" />
+              </form>
+            </div>
           </div>
-          <form action="POST" class="discussion-right__form">
-            <input type="text" name="name" id="name" />
-            <input type="email" name="email" id="email" />
-            <label for="subject">Choose a car:</label>
-            <select id="subject" name="subject">
-              <option value="lending page">lending page</option>
-              <option value="e-commerce">e-commerce</option>
-              <option value="corporate website">corporate website</option>
-            </select>
-            <input type="button" value="submit" />
-          </form>
         </div>
       </section>
     </main>
 
     <!-- Footer section -->
-    <footer class="footer" id="footer">
-      <div class="footer-logo">
-        <img src="/img/logo.svg" alt="logo" class="footer-logo__img" />
-        <p><span>&lt;</span> Turning code into creative solutions <span>></span></p>
+    <footer id="footer">
+      <div class="container footer">
+        <nav class="footer-nav footer-links">
+          <div class="footer-logo">
+            <a class="logo" href="/index.html"><img src="./img/logo.svg" alt="logo" /></a>
+            <p class="footer-logo__text">
+              <span>&lt;</span> Turning code into creative solutions <span>></span>
+            </p>
+          </div>
+          <ul class="footer-nav__list footer-list">
+            <li class="footer-list__item"><a href="#about">About Me</a></li>
+            <li class="footer-list__item"><a href="#services">Services</a></li>
+            <li class="footer-list__item"><a href="#cases">Cases</a></li>
+            <li class="footer-list__item">
+              CV<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <use href="./img/icons-sprite.svg#download"></use>
+              </svg>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer-connects">
+          <div class="footer-contacts">
+            <p class="footer-contacts__title">Contacts:</p>
+            <ul class="footer-list">
+              <li class="footer-contact__item">
+                <a class="comunication-link" href="mailto:denyshudzenkouk@gmail.com"
+                  ><span class="comunication-icon"
+                    ><svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use href="./img/icons-sprite.svg#email"></use>
+                    </svg> </span
+                  >denyshudzenkouk@gmail.com</a
+                >
+              </li>
+              <li class="footer-contact__item">
+                <a class="comunication-link" href="tel:+447871855007"
+                  ><span class="comunication-icon"
+                    ><svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use href="./img/icons-sprite.svg#phone"></use>
+                    </svg> </span
+                  >+447871855007</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <p class="footer-social__title">Social:</p>
+            <ul class="footer-list">
+              <li class="footer-social__item">
+                <a
+                  class="comunication-link linkdin"
+                  href="https://uk.linkedin.com/in/denys-hudzenko-690300135?trk=people-guest_people_search-card"
+                  ><span class="comunication-icon"
+                    ><svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use href="./img/icons-sprite.svg#linkedin"></use>
+                    </svg> </span
+                  >Denys Hudzenko</a
+                >
+              </li>
+              <li class="footer-social__item">
+                <a class="comunication-link telegram" href="https://t.me/+380939505097&profile"
+                  ><span class="comunication-icon"
+                    ><svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <use href="./img/icons-sprite.svg#telegram"></use>
+                    </svg> </span
+                  >+38(093)9505097</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <nav class="footer-nav">
-        <ul class="footer-nav__list footer-list">
-          <li class="footer-list__item"><a href="#about">About Me</a></li>
-          <li class="footer-list__item"><a href="#services">Services</a></li>
-          <li class="footer-list__item"><a href="#cases">Cases</a></li>
-          <li class="footer-list__item">CV <img src="/img/download_icon.svg" alt="download" /></li>
-        </ul>
-      </nav>
-      <address>
-        <ul class="footer-contacts">
-          <li class="footer-contact__item">
-            <a href="mailto:denyshudzenkouk@gmail.com">denyshudzenkouk@gmail.com</a>
-          </li>
-          <li class="footer-contact__item"><a href="tel:+447871855007">+447871855007</a></li>
-        </ul>
-        <ul class="footer-social">
-          <li class="footer-social__item">
-            <a href="mailto:denyshudzenkouk@gmail.com">denyshudzenkouk@gmail.com</a>
-          </li>
-          <li class="footer-social__item"><a href="">+447871855007</a></li>
-        </ul>
-      </address>
+
+      <!-- copyright -->
+      <div class="copyrights">
+        <p>
+          Design was made by
+          <a href="https://www.instagram.com/design_tnk/" target="_blank"><i>Mariia Burtnuk</i></a
+          >.
+        </p>
+        <p>
+          Developed by
+          <a href="https://uk.linkedin.com/in/denys-hudzenko-690300135" target="_blank"
+            ><i>Denys Hudzenko</i></a
+          >.
+        </p>
+        <p><span class="copyright-symbol">&#169;</span> All rights reserved.</p>
+      </div>
     </footer>
     <script src="/js/main.js"></script>
   </body>

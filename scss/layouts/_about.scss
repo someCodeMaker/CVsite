@@ -1,0 +1,47 @@
+.section-about {
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 80px 50%;
+    width: 50%;
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      gap: 90px;
+    }
+
+  }
+
+  &__text {
+    width: 25%;
+    margin-left: auto;
+    margin-bottom: 70px;
+  }
+
+  &__skills-title {
+    margin-left: 50%;
+    width: 16%;
+    margin-bottom: 32px;
+  }
+
+  &__skills-container {
+    display: flex;
+    justify-content: flex-end;
+    border: 2px $main-color solid;
+    border-radius: 100px;
+    min-height: 370px;
+    position: relative;
+
+
+    &-photo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-width: 760px;
+      max-height: 845px;
+    }
+  }
+}

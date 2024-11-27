@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 125%;
+  line-height: 1.4;
+}
+
+body {
+  background-color: $bg-color;
+  color: $main-text-color;
+  font-family: $text-font;
+  font-weight: 400;
+  padding: 50px;
+
+  // overflow-x: hidden;
+
+
+}
+
+
+a {
+  color: $main-text-color;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $title-font;
+  text-transform: uppercase;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}

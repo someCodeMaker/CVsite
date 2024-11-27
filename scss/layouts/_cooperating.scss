@@ -1,0 +1,49 @@
+.section-cooperating {
+
+  //cooperating title
+  &__title {
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 140px;
+
+    &_span:last-child {
+      align-self: flex-end;
+    }
+  }
+
+  // cooperating list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 96px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      flex-basis: calc(100%/12*2);
+
+      &_number {
+        color: $coop-numbers;
+        font-size: 40px;
+        margin-bottom: 24px;
+      }
+
+      &_title {
+        font-size: 32px;
+        margin-bottom: 54px;
+        text-transform: uppercase;
+        font-family: $text-font-medium;
+      }
+
+      &_text {
+        display: block;
+        border-top: 1px $main-color solid;
+        padding-top: 24px;
+        font-size: 20px;
+      }
+
+
+    }
+  }
+}
