@@ -1,81 +1,78 @@
-  .section-services {
+.section-services {
+  &__list {
+    display: flex;
+    flex-direction: column;
 
-    &__list {
+    &-item {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+      gap: 40px;
+      background-color: $bg-form-color;
+      border-radius: 100px;
+      padding: 65px 80px;
+      margin-bottom: 69px;
+      min-height: 340px;
 
-      &-item {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        align-items: center;
-        gap: 40px;
-        background-color: $bg-form-color;
-        border-radius: 100px;
-        padding: 65px 80px;
-        margin-bottom: 69px;
-        min-height: 340px;
+      &-text {
+        flex-basis: calc(100% / 12 * 5);
+        padding: 0 30px;
 
-
-        &_text {
-          flex-basis: calc(100%/12*5);
-          padding: 0 30px;
-
-          &-title {
-            margin-bottom: 48px;
-            text-transform: uppercase;
-            font-size: 56px;
-          }
-
-          &-content {
-            align-items: center;
-            width: 85%;
-          }
-
+        &-title {
+          margin-bottom: 48px;
+          text-transform: uppercase;
+          font-size: 56px;
         }
 
-        &_number {
-          position: absolute;
-          font-family: $title-font;
-          font-size: 340px;
-          left: 3%;
-          top: -20%;
-          max-height: 330px;
-          font-weight: small;
-          overflow: hidden;
-          text-align: center;
+        &-content {
+          align-items: center;
+          width: 85%;
+        }
+      }
+
+      &-number {
+        position: absolute;
+        font-family: $title-font;
+        font-size: 340px;
+        left: 3%;
+        top: -20%;
+        max-height: 330px;
+        font-weight: 300;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      &--abstract-img {
+        position: absolute;
+        right: 5%;
+        bottom: 0;
+      }
+
+      // change elements position in every second list tag
+      &:nth-child(even) {
+        .services-number {
+          left: 70%;
         }
 
-
-        &_abstract-img {
-          position: absolute;
-          right: 5%;
-          bottom: 0;
+        .services-abstract {
+          left: 5%;
         }
-
-        // change elements position in every second list tag
-        &:nth-child(even) {
-          .services-number {
-            left: 70%;
-          }
-
-          .services-abstract {
-            left: 5%;
-          }
-
-        }
-
       }
     }
+  }
 
-    &__button {
-      display: flex;
-      flex-grow: 1;
-      border-radius: 80px;
-      padding: 29px 0;
-      width: 100%;
-      justify-content: center;
-      font-size: 32px;
+  &__button {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 80px;
+    padding: 29px 0;
+    width: 100%;
+    justify-content: center;
+    font-size: 32px;
 
+    &:hover {
+      background-color: $main-color;
     }
   }
+}

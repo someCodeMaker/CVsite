@@ -5,7 +5,7 @@
   line-height: 1;
   text-decoration: none;
   font-family: $title-font;
-
+  font-weight: 500;
 
   &__line-top {
     display: flex;
@@ -30,7 +30,6 @@
           background-image: url("../../img/circle_1.png");
           position: relative;
           left: 1vw;
-
         }
 
         &:last-child {
@@ -52,16 +51,11 @@
     display: flex;
 
     &_letter {
-
       &:hover {
-        font-family: $title-font-light;
         color: $main-color;
         font-style: italic;
-        font-weight: 400;
+        font-weight: 300;
       }
     }
-
-
   }
-
 }

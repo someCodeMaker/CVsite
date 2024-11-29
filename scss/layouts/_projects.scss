@@ -1,94 +1,98 @@
-.projects {
+.section-projects {
 
   // projects title
-  &-title {
+  &__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 40%;
 
 
-    &__top {
+    &-line-one {
+      display: flex;
+      justify-content: space-between;
 
-      .project-top__icon {
+      &-icon {
         margin-left: 13%;
         position: relative;
         top: -10px;
       }
     }
 
-    &__bottom {
+    &-line-two {
       text-align: end;
     }
   }
 
   // projects list
-  &-list {
+  &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    gap: 40px;
     margin-bottom: 80px;
 
-    &__item {
-      flex-basis: 49%;
 
-      .projects-item {
+
+    &-item {
+      flex-basis: calc(50% - 20px);
+      flex-grow: 1;
+
+
+
+      &-title {
+        margin-bottom: 10px;
+      }
+
+      &-text {
+        margin-bottom: 16px;
+      }
+
+      &-img {
         display: block;
-        padding: 70px;
+        margin: 0 auto;
+      }
+
+      &-icon {
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        transform: rotate(45deg);
+      }
+
+
+      &-link {
+        display: block;
+        padding: 60px 100px;
         border-radius: 100px;
         background-position: center;
         background-size: cover;
         position: relative;
+        height: 100%;
 
-        &__title {
-          margin-bottom: 8px;
-        }
-
-        &__text {
-          margin-bottom: 15px;
-        }
-
-        &__img {
-          display: block;
-          margin: 0 auto;
-        }
-
-        .projects-arrow {
-          position: absolute;
-          top: 15%;
-          right: 15%;
-          transform: rotate(45deg);
-        }
-
-        &__one {
+        &:first-child {
           background-image: url(/img/project-bg-1.jpg);
           padding-bottom: 61px;
+          border-radius: 2px solid red;
         }
 
-        &__two {
+        &:nth-child(2) {
           background-image: url(/img/project-bg-2.jpg);
         }
 
-        &__three {
+        &:nth-child(3) {
           background-image: url(/img/project-bg-3.jpg);
           padding-bottom: 61px;
         }
 
-        &__four {
+        &:last-child {
           background-image: url(/img/project-bg-4.jpg);
         }
-
-
       }
     }
-
-
-
-
   }
 
-  &-text {
+  &__text {
     text-align: center;
   }
 

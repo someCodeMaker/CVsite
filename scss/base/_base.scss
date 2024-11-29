@@ -7,6 +7,10 @@
 html {
   font-size: 125%;
   line-height: 1.4;
+
+  @media screen and ($size-large) {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -16,11 +20,10 @@ body {
   font-weight: 400;
   padding: 50px;
 
-  // overflow-x: hidden;
-
-
+  @media screen and ($size-mobile) {
+    padding: 70px 16px;
+  }
 }
-
 
 a {
   color: $main-text-color;
@@ -29,7 +32,6 @@ a {
 
 ul {
   list-style: none;
-
 }
 
 h1,

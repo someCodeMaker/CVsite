@@ -6,24 +6,33 @@
 @font-face {
   font-family: "Space Grotesk light";
   src: url(../fonts/SpaceGrotesk-Light.ttf) format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "Arupala Grotesk";
-  src: url(../fonts/ArupalaGroteskTrial-Italic.ttf) format("truetype");
+  src: url(../../fonts/ArupalaGroteskTrial-Italic.ttf) format("truetype");
+  font-style: italic;
 }
 
 @font-face {
   font-family: "Arupala Grotesk";
-  src: url(../fonts/ArupalaGroteskTrial-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Arupala Grotesk light";
-  src: url(../fonts/ArupalaGroteskTrial-Light.ttf) format("truetype");
+  src: url(../../fonts/ArupalaGroteskTrial-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Arupala Grotesk";
-  src: url(../fonts/ArupalaGroteskTrial-Medium.ttf) format("truetype");
+  src: url(../../fonts/ArupalaGroteskTrial-Light.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Arupala Grotesk";
+  src: url(../../fonts/ArupalaGroteskTrial-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Arupala Grotesk";
+  src: url(../../fonts/ArupalaGroteskTrial-SuperLt.ttf) format("truetype");
+  font-weight: 300;
 }

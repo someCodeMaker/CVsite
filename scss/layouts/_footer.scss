@@ -2,79 +2,131 @@
   display: flex;
   font-size: 18px;
   margin-bottom: 80px;
-  font-weight: lighter;
+  font-weight: 400;
   gap: 40px;
   flex-grow: 1;
 
-
-  &-logo {
-    display: flex;
+  //1200
+  @media screen and ($size-normal) {
+    font-size: 16px;
+  }
+  //mobile 480
+  @media screen and ($size-mobile) {
     flex-direction: column;
-    flex-grow: 1;
-
-
-    .logo {
-      margin-bottom: 48px;
-    }
-
-    span {
-      color: $main-color;
-    }
+    gap: 40px;
   }
 
-  &-links {
+  &__nav {
     display: flex;
     flex-basis: calc(50% - 20px);
     gap: 20px;
+    flex-grow: 1;
 
+    @media screen and ($size-normal) {
+      flex-grow: 0;
+      gap: 40px;
+    }
+    //mobile 480
+    @media screen and ($size-mobile) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
 
-    .footer-list {
+    &-logo {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      .logo {
+        margin-bottom: 48px;
+
+        //mobile 480
+        @media screen and ($size-mobile) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    &-list {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
       gap: 26px;
-    }
+      flex-shrink: 0;
 
+      //mobile 480
+      @media screen and ($size-mobile) {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 0;
+      }
+
+      &-item {
+        &_download {
+          display: flex;
+        }
+      }
+    }
   }
 
-
-
-  &-connects {
+  &__contacts {
     display: flex;
+    justify-content: space-between;
     flex-basis: calc(50% - 20px);
     gap: 20px;
 
-    .footer-contacts {
-      flex-basis: calc(50% - 10px);
+    // mobile 480
+    @media screen and ($size-mobile) {
+      flex-direction: column;
 
+      gap: 40px;
     }
 
-    .footer-social {
-      flex-basis: calc(50% - 10px);
+    &-title {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    &-list,
+    &-container {
+      display: flex;
+      flex-direction: column;
+
+      gap: 26px;
+
+      flex-basis: calc(50% - 13px);
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+
+      @media screen and ($size-mobile) {
+        flex-basis: 100%;
+        gap: 40px;
+      }
+      @media screen and ($size-large) {
+        font-size: 16px;
+        gap: 20px;
+      }
     }
   }
 
-  &-comunication {
+  &-communication {
     flex-grow: 2;
     display: flex;
     justify-content: space-around;
-
-    p {
-      font-size: 20px;
-      text-transform: uppercase;
-      margin-bottom: 26px;
-    }
-
-
   }
 
-  .comunication-link {
+  .communication-link {
     display: flex;
     align-items: center;
-
   }
 
-  .comunication-icon {
+  .communication-icon {
     margin-right: 8px;
   }
 }
@@ -85,8 +137,8 @@
   color: $main-text-color;
   text-align: center;
 
-  i,
-  span {
+  &_symbol-color,
+  &__link {
     color: $main-color;
   }
 }

@@ -1,5 +1,4 @@
 .section-cooperating {
-
   //cooperating title
   &__title {
     width: 63%;
@@ -7,7 +6,7 @@
     flex-direction: column;
     margin-bottom: 140px;
 
-    &_span:last-child {
+    &--span:last-child {
       align-self: flex-end;
     }
   }
@@ -21,29 +20,32 @@
     &-item {
       display: flex;
       flex-direction: column;
-      flex-basis: calc(100%/12*2);
+      flex-basis: calc(100% / 12 * 2);
 
-      &_number {
+      &-number {
         color: $coop-numbers;
         font-size: 40px;
         margin-bottom: 24px;
       }
 
-      &_title {
+      &-title {
         font-size: 32px;
         margin-bottom: 54px;
         text-transform: uppercase;
-        font-family: $text-font-medium;
       }
 
-      &_text {
+      &-number,
+      &-title {
+        font-family: $title-font;
+        font-weight: 500;
+      }
+
+      &-text {
         display: block;
         border-top: 1px $main-color solid;
         padding-top: 24px;
         font-size: 20px;
       }
-
-
     }
   }
 }

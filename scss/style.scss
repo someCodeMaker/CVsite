@@ -1,32 +1,29 @@
-@import '../scss/utils/variables';
-@import '../scss/utils/fonts';
-@import '../scss/utils/helpers';
-@import '../scss/utils/mixins';
+@import "../scss/utils/variables";
+@import "../scss/utils/fonts";
+@import "../scss/utils/helpers";
+@import "../scss/utils/mixins";
 
+@import "../scss/base/base";
 
-@import '../scss/base/base';
+@import "../scss/components/container";
+@import "../scss/components/forms";
+@import "../scss/components/title";
+@import "../scss/components/links";
+@import "../scss/components/input";
+@import "../scss/components/buttons";
+@import "../scss/components/section";
+@import "../scss/components/logo";
+@import "../scss/components/color";
+@import "../scss/components/skills";
 
-@import '../scss/components/container';
-@import '../scss/components/forms';
-@import '../scss/components/title';
-@import '../scss/components/links';
-@import '../scss/components/input';
-@import '../scss/components/buttons';
-@import '../scss/components/section';
-@import '../scss/components/logo';
-@import '../scss/components/color';
-@import '../scss/components/skills';
-
-
-
-@import '../scss/layouts/header';
-@import '../scss/layouts/hero';
-@import '../scss/layouts/about';
-@import '../scss/layouts/cooperating';
-@import '../scss/layouts/services';
-@import '../scss/layouts/awareness';
-@import '../scss/layouts/projects';
-@import '../scss/layouts/discussion';
-@import '../scss/layouts/footer';
-@import '../scss/layouts/modal';
-@import '../scss/layouts/media';
+@import "../scss/layouts/header";
+@import "../scss/layouts/hero";
+@import "../scss/layouts/about";
+@import "../scss/layouts/cooperating";
+@import "../scss/layouts/services";
+@import "../scss/layouts/awareness";
+@import "../scss/layouts/projects";
+@import "../scss/layouts/discussion";
+@import "../scss/layouts/footer";
+@import "../scss/layouts/modal-contact";
+@import "../scss/layouts/modal-menu";
