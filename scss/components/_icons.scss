@@ -1,0 +1,20 @@
+.discussion-section--icon {
+  width: 30px;
+  height: 42px;
+
+  //tablet 768
+  @media screen and ($size-tablet) {
+    width: 30px;
+    height: 30px;
+  }
+  //mobile 480
+  @media screen and ($size-mobile) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.download-icon {
+  position: relative;
+  bottom: 5px;
+}

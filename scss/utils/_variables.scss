@@ -13,11 +13,15 @@ $title-font: "Arupala Grotesk";
 $text-font: "Space Grotesk light";
 $text-font-medium: "Space Grotesk medium";
 
+//font size
+$text-size: 20px;
+$title-size: 80px;
+$title-size-secondary: 28px;
+
 // Media queries
 $size-mobile: "max-width: 480px";
-// $size-tablet: "max-width: 481px";
-$size-tablet: "max-width: 769px";
-$size-small: "max-width: 1025px";
-$size-normal: "max-width: 1200px";
-$size-large: "max-width: 1500px";
+$size-tablet: "min-width: 481px";
+$size-small: "min-width: 765px";
+$size-normal: "min-width: 1025px";
+$size-large: "min-width: 1380px";
 $size-xlarge: "min-width: 1800px";

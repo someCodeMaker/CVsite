@@ -1,0 +1,28 @@
+//font size dependencies
+html {
+  @media screen and ($size-mobile) {
+    font-size: 13px;
+  }
+
+  @media screen and ($size-tablet) {
+    font-size: 15px;
+  }
+
+  @media screen and ($size-small) {
+    font-size: 16px;
+  }
+
+  @media screen and ($size-large) {
+    font-size: 20px;
+  }
+}
+
+//padding dependencies
+body {
+  @media screen and ($size-small) {
+    padding: 70px 30px;
+  }
+  @media screen and ($size-mobile) {
+    padding: 70px 16px;
+  }
+}

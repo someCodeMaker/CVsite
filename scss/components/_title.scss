@@ -2,6 +2,14 @@
   font-size: 80px;
   margin-bottom: 140px;
   font-weight: 500;
+
+  //tablet 768
+  @media screen and ($size-tablet) {
+    font-size: 28px;
+  } //mobile
+  @media screen and ($size-mobile) {
+    font-size: 28px;
+  }
 }
 
 .secondary-title {
@@ -9,4 +17,12 @@
   font-size: 28px;
   text-transform: uppercase;
   font-family: $text-font-medium;
+
+  //tablet 1024
+  @media screen and ($size-tablet) {
+    font-size: 20px;
+  } //tablet 1024
+  @media screen and ($size-mobile) {
+    font-size: 20px;
+  }
 }

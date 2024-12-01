@@ -13,65 +13,65 @@
   }
 }
 
-// menu button for mobile screen
+// menu button for mobile/tablet screen
 .menu-button {
-  display: none;
+  display: block;
+  background-color: $main-text-color;
+  width: 17px;
+  height: 1px;
+  outline: none;
+  border: none;
+  transition: transform 2s linear;
   position: relative;
 
-  @media screen and ($size-mobile) {
-    display: block;
-    background-color: $main-text-color;
-    width: 17px;
-    height: 1px;
-    outline: none;
-    border: none;
-    transition: transform 2s linear;
-
-    // &-open {
-    //   background-color: $bg-color;
-    //   border: none;
-
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     width: 34px;
-    //     height: 1px;
-    //     background-color: $main-color;
-    //     transform: rotate(-45deg);
-    //   }
-    //   &::after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: 0;
-    //     right: 0;
-    //     width: 34px;
-    //     height: 1px;
-    //     background-color: $main-color;
-    //     transform: rotate(45deg);
-    //   }
-    // }
-
-    &-close {
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 8px;
-        right: 0;
-        width: 35px;
-        height: 1px;
-        background-color: $main-text-color;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 8px;
-        right: 0;
-        width: 35px;
-        height: 1px;
-        background-color: $main-text-color;
-      }
+  &-close {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 8px;
+      right: 0;
+      width: 35px;
+      height: 1px;
+      background-color: $main-text-color;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 0;
+      width: 35px;
+      height: 1px;
+      background-color: $main-text-color;
     }
   }
+
+  @media screen and ($size-small) {
+    display: none;
+  }
+
+  // &-open {
+  //   background-color: $bg-color;
+  //   border: none;
+
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //     width: 34px;
+  //     height: 1px;
+  //     background-color: $main-color;
+  //     transform: rotate(-45deg);
+  //   }
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     bottom: 0;
+  //     right: 0;
+  //     width: 34px;
+  //     height: 1px;
+  //     background-color: $main-color;
+  //     transform: rotate(45deg);
+  //   }
+  // }
 }

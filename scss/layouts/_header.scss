@@ -2,22 +2,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 125px;
+  margin-bottom: 55px;
   gap: 20px;
+
+  @media screen and ($size-small) {
+    margin-bottom: 75px;
+  }
 
   @media screen and ($size-normal) {
     margin-bottom: 100px;
   }
-  @media screen and ($size-mobile) {
-    margin-bottom: 55px;
+
+  @media screen and ($size-large) {
+    margin-bottom: 125px;
   }
 
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 50%;
-    gap: 40px;
+
+    //1024
+    @media screen and ($size-small) {
+      flex-basis: 60%;
+      gap: 40px;
+    }
+    @media screen and ($size-large) {
+      gap: 40px;
+      flex-basis: 50%;
+    }
 
     &-logo {
       flex-grow: 1;
@@ -28,37 +41,37 @@
     }
 
     &-list {
-      display: flex;
+      display: none;
       flex-grow: 2;
       justify-content: end;
       align-items: center;
-      gap: 130px;
 
-      // 1400
-      @media screen and ($size-large) {
+      @media screen and ($size-small) {
+        display: flex;
+        justify-content: space-around;
+        gap: 40px;
+      }
+
+      @media screen and ($size-normal) {
         gap: 100px;
       }
-
-      //1200
-      @media screen and ($size-normal) {
-        gap: 50px;
-      }
-
-      @media screen and ($size-mobile) {
-        display: none;
-      }
+      // @media screen and ($size-large) {
+      //   gap: 130px;
+      // }
     }
   }
 
   &__contacts {
-    display: flex;
+    display: none;
     align-items: center;
     flex-basis: calc(100% / 12 * 5 - 20px);
     justify-content: flex-end;
     gap: 30px;
 
-    @media screen and ($size-mobile) {
-      display: none;
+    //1024
+    @media screen and ($size-small) {
+      flex-basis: 35%;
+      display: flex;
     }
 
     &-button {
@@ -66,18 +79,19 @@
       font-size: 20px;
       font-weight: normal;
 
-      //1400
       @media screen and ($size-large) {
         font-size: 18px;
       }
 
-      //1200
       @media screen and ($size-normal) {
         font-size: 16px;
         padding: 10px 32px;
       }
 
-      //mobile 480
+      @media screen and ($size-small) {
+        padding: 8px 28px;
+        font-size: 15px;
+      }
 
       &:hover {
         background-color: transparent;

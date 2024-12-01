@@ -3,8 +3,10 @@
 @import "../scss/utils/helpers";
 @import "../scss/utils/mixins";
 
+// base
 @import "../scss/base/base";
 
+// components
 @import "../scss/components/container";
 @import "../scss/components/forms";
 @import "../scss/components/title";
@@ -15,7 +17,9 @@
 @import "../scss/components/logo";
 @import "../scss/components/color";
 @import "../scss/components/skills";
+@import "../scss/components/icons";
 
+// leyouts
 @import "../scss/layouts/header";
 @import "../scss/layouts/hero";
 @import "../scss/layouts/about";
@@ -27,3 +31,4 @@
 @import "../scss/layouts/footer";
 @import "../scss/layouts/modal-contact";
 @import "../scss/layouts/modal-menu";
+@import "../scss/layouts/media";

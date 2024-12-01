@@ -5,12 +5,8 @@
 }
 
 html {
-  font-size: 125%;
+  font-size: $text-size;
   line-height: 1.4;
-
-  @media screen and ($size-large) {
-    font-size: 100%;
-  }
 }
 
 body {
@@ -19,10 +15,6 @@ body {
   font-family: $text-font;
   font-weight: 400;
   padding: 50px;
-
-  @media screen and ($size-mobile) {
-    padding: 70px 16px;
-  }
 }
 
 a {
