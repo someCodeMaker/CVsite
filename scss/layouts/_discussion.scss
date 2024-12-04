@@ -39,18 +39,32 @@
     }
   }
   @media screen and ($size-normal) {
-    background-size: 40%;
     background-image: url("../../img/discussion_abstract.png");
+    background-size: 40%;
     @keyframes bounce {
       0% {
-        background-position: left -20px top 3%;
+        background-position: left -20px top 20%;
       }
 
       50% {
         background-position: left -20px top 0%;
       }
       100% {
-        background-position: left -20px top 3%;
+        background-position: left -20px top 20%;
+      }
+    }
+  }
+  @media screen and ($size-xlarge) {
+    @keyframes bounce {
+      0% {
+        background-position: left -20px top;
+      }
+
+      50% {
+        background-position: left bottom;
+      }
+      100% {
+        background-position: left -20px top;
       }
     }
   }
@@ -69,6 +83,7 @@
     }
 
     &-title {
+      margin-bottom: 48px;
       @media screen and ($size-small) {
         flex-basis: calc(50% - 20px);
       }

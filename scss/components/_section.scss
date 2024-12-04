@@ -1,8 +1,7 @@
 .section--margin-bottom {
-  margin-bottom: 180px;
-  display: none;
+  margin-bottom: 150px;
 
-  @media screen and ($size-mobile) and ($size-tablet) and ($size-small) {
-    margin-bottom: 130px;
+  @media screen and ($size-small) {
+    margin-bottom: 180px;
   }
 }

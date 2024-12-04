@@ -1,13 +1,28 @@
 .section-cooperating {
   //cooperating title
   &__title {
-    width: 63%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 140px;
+    margin-bottom: 50px;
 
     &--span:last-child {
       align-self: flex-end;
+    }
+
+    @media screen and ($size-tablet) {
+      margin-bottom: 140px;
+    }
+    @media screen and ($size-small) {
+      font-size: 6vw;
+      width: 90%;
+    }
+    @media screen and ($size-large) {
+      font-size: 80px;
+      width: 66%;
+    }
+    @media screen and ($size-xlarge) {
+      width: 63%;
     }
   }
 
@@ -15,23 +30,68 @@
   &__list {
     display: flex;
     justify-content: space-between;
-    gap: 96px;
+    gap: 24px 16px;
+    flex-wrap: wrap;
+
+    @media screen and ($size-small) {
+      gap: 32px 32px;
+    }
+    @media screen and ($size-normal) {
+      gap: 32px 14vw;
+      justify-content: flex-start;
+    }
+    @media screen and ($size-large) {
+      justify-content: space-between;
+      gap: 32px 2vw;
+    }
+    @media screen and ($size-xlarge) {
+      gap: 32px 96px;
+    }
 
     &-item {
       display: flex;
       flex-direction: column;
-      flex-basis: calc(100% / 12 * 2);
+      flex-basis: calc(50% - 8px);
+
+      @media screen and ($size-small) {
+        flex-basis: calc(50% - 16px);
+      }
+      @media screen and ($size-normal) {
+        flex-basis: 22vw;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      @media screen and ($size-large) {
+        flex-basis: 18%;
+      }
+      @media screen and ($size-xlarge) {
+        flex-basis: 15%;
+      }
 
       &-number {
         color: $coop-numbers;
-        font-size: 40px;
+        font-size: 28px;
         margin-bottom: 24px;
+
+        @media screen and ($size-small) {
+          font-size: 32px;
+          margin-bottom: 40px;
+        }
       }
 
       &-title {
-        font-size: 32px;
-        margin-bottom: 54px;
+        font-size: 18px;
+        margin-bottom: 40px;
         text-transform: uppercase;
+
+        @media screen and ($size-tablet) {
+          font-size: 22px;
+        }
+
+        @media screen and ($size-small) {
+          font-size: 28px;
+          margin-bottom: 54px;
+        }
       }
 
       &-number,
@@ -44,7 +104,6 @@
         display: block;
         border-top: 1px $main-color solid;
         padding-top: 24px;
-        font-size: 20px;
       }
     }
   }

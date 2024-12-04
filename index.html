@@ -57,14 +57,20 @@
               <h1 class="section-hero__title">
                 <span class="section-hero__title--line-one">
                   <span>Transform</span>
-                  <span class="section-hero__title--line-one--accent main-accent">your ideas</span>
-                  <img
-                    class="section-hero__title--line-one--arrow"
-                    src="./img/title_arrow.svg"
-                    alt="arrow"
-                  />
+                  <span>
+                    <span class="section-hero__title--line-one--accent main-accent">
+                      your ideas
+                    </span>
+                    <img
+                      class="section-hero__title--line-one--arrow"
+                      src="./img/title_arrow.svg"
+                      alt="arrow"
+                    />
+                  </span>
                 </span>
-                <span class="section-hero__title--line-two">into exceptional</span>
+                <span class="section-hero__title--line-two"
+                  >into <span class="section-hero__title--line-two--accent">exceptional</span></span
+                >
                 <span class="section-hero__title--line-three">
                   <span>websites</span>
                   <span class="section-hero__title--line-three--abstract-container">
@@ -129,9 +135,22 @@
               returned to what my soul is passionate about and have been working as a freelance
               frontend developer for several years.
             </p>
-            <h3 class="section-about__skills-title secondary-title">PROGRAMMING LANGUAGE I USE</h3>
+            <h3 class="section-about__skills-title secondary-title">
+              <span>PROGRAMMING <br />LANGUAGE I USE:</span>
+            </h3>
             <div class="section-about__skills-container">
-              <img src="/img/my_photo.jpg" alt="me" class="section-about__skills-container-photo" />
+              <!-- <img
+                srcset="./img/my_photo_480.png 480w, ./img/my_photo.png 800w"
+                sizes="(max-width: 600px) 480px, 800px"
+                src="./img/my_photo.png"
+                alt="me"
+                class="section-about__skills-container-photo"
+              /> -->
+              <picture class="section-about__skills-container-photo">
+                <source media="(max-width: 764px)" srcset="./img/my_photo_480.png" />
+                <source media="(min-width: 765px)" srcset="./img/my_photo.png" />
+                <img src="./img/my_photo.png" alt="me" />
+              </picture>
               <ul class="section-about__skills-list skill-list">
                 <li class="skill-list__item">
                   <button class="skill-list__item-button" id="skill-html">HTML</button>
@@ -183,7 +202,7 @@
             <ul class="section-cooperating__list">
               <li class="section-cooperating__list-item">
                 <span class="section-cooperating__list-item-number">1.</span>
-                <span class="section-cooperating__list-item-title">Tailored Solutions</span>
+                <span class="section-cooperating__list-item-title">Tailored <br />Solutions</span>
                 <span class="section-cooperating__list-item-text">
                   crafting bespoke web solutions tailored to each client's unique requirements and
                   objectives.
@@ -191,7 +210,10 @@
               </li>
               <li class="section-cooperating__list-item">
                 <span class="section-cooperating__list-item-number">2.</span>
-                <span class="section-cooperating__list-item-title">Quality and Precision</span>
+                <span class="section-cooperating__list-item-title"
+                  >Quality and<br />
+                  Precision</span
+                >
                 <span class="section-cooperating__list-item-text"
                   >attention to details is paramount for me.</span
                 >
@@ -214,7 +236,7 @@
               </li>
               <li class="section-cooperating__list-item">
                 <span class="section-cooperating__list-item-number">5.</span>
-                <span class="section-cooperating__list-item-title">Continuous Support</span>
+                <span class="section-cooperating__list-item-title">Continuous <br />Support</span>
                 <span class="section-cooperating__list-item-text">
                   ongoing support and maintenance services to ensure the smooth operation of the
                   website.
@@ -234,48 +256,85 @@
               <li class="section-services__list-item">
                 <span class="section-services__list-item-number services-number">01</span>
                 <div class="section-services__list-item-text">
-                  <h4 class="section-services__list-item-text-title">landing page</h4>
+                  <h3 class="section-services__list-item-text-title">landing page</h3>
                   <p class="section-services__list-item-text-content">
                     a targeted website for a specific product or service that will attract maximum
                     customer attention
                   </p>
                 </div>
-                <img
-                  src="./img/abstract2.png"
-                  alt="abstract1"
-                  class="section-services__list-item--abstract-img services-abstract"
-                />
+
+                <picture class="section-services__list-item--abstract services-abstract">
+                  <source
+                    media="(max-width: 768px)"
+                    srcset="./img/services_abstract_1_mobile.png"
+                  />
+
+                  <source
+                    media="(max-width: 1799px )"
+                    srcset="./img/services_abstract_1_normal.png"
+                  />
+                  <source media="(min-width: 1800px)" srcset="./img/services_abstract_1.png" />
+                  <img
+                    src="./img/services_abstract_1.png"
+                    alt="abstract1"
+                    class="section-services__list-item--abstract-img"
+                  />
+                </picture>
               </li>
 
               <li class="section-services__list-item">
                 <span class="section-services__list-item-number services-number">02</span>
                 <div class="section-services__list-item-text">
-                  <h4 class="section-services__list-item-text-title">E-Commerce</h4>
+                  <h3 class="section-services__list-item-text-title">E-Commerce</h3>
                   <p class="section-services__list-item-text-content">
                     a modern and convenient website for your store, which will allow you to sell
                     your product quickly and efficiently.
                   </p>
+                </div>
+                <picture class="section-services__list-item--abstract services-abstract">
+                  <source
+                    media="(max-width: 768px)"
+                    srcset="./img/services_abstract_2_mobile.png"
+                  />
+                  <source
+                    media="(max-width: 1799px)"
+                    srcset="./img/services_abstract_2_normal.png"
+                  />
+                  <source media="(min-width: 1800px)" srcset="./img/services_abstract_2.png" />
                   <img
                     src="./img/services_abstract_2.png"
                     alt="abstract2"
-                    class="section-services__list-item--abstract-img services-abstract"
+                    class="section-services__list-item--abstract-img"
                   />
-                </div>
+                </picture>
               </li>
               <li class="section-services__list-item">
                 <span class="section-services__list-item-number services-number">03</span>
                 <div class="section-services__list-item-text">
-                  <h4 class="section-services__list-item-text-title">Corporate site</h4>
+                  <h3 class="section-services__list-item-text-title">Corporate site</h3>
                   <p class="section-services__list-item-text-content">
                     the type of website that will enhance your company's image and introduce
                     customers to your services.
                   </p>
                 </div>
-                <img
-                  src="./img/services_abstract_3.png"
-                  alt="abstract3"
-                  class="section-services__list-item--abstract-img services-abstract"
-                />
+
+                <picture class="section-services__list-item--abstract services-abstract">
+                  <source
+                    media="(max-width: 768px)"
+                    srcset="./img/services_abstract_3_mobile.png"
+                  />
+                  <source
+                    media="(max-width: 1799px )"
+                    srcset="./img/services_abstract_3_normal.png"
+                  />
+
+                  <source media="(min-width: 1800px)" srcset="./img/services_abstract_3.png" />
+                  <img
+                    src="./img/services_abstract_3.png"
+                    alt="abstract3"
+                    class="section-services__list-item--abstract-img"
+                  />
+                </picture>
               </li>
             </ul>
 
@@ -371,7 +430,7 @@
             <ul class="section-projects__list">
               <li class="section-projects__list-item">
                 <a href="#" class="section-projects__list-item-link">
-                  <h4 class="section-projects__list-item-title">heil’s furniture</h4>
+                  <h3 class="section-projects__list-item-title">heil’s furniture</h3>
                   <p class="section-projects__list-item-text">
                     corporate website for modern furniture
                   </p>
@@ -392,7 +451,7 @@
               </li>
               <li class="section-projects__list-item">
                 <a href="#" class="section-projects__list-item-link">
-                  <h4 class="section-projects__list-item-title">physics workshop</h4>
+                  <h3 class="section-projects__list-item-title">physics workshop</h3>
                   <p class="section-projects__list-item-text">
                     landing page for announcing the event
                   </p>
@@ -415,7 +474,7 @@
               </li>
               <li class="section-projects__list-item">
                 <a href="#" class="section-projects__list-item-link">
-                  <h4 class="section-projects__list-item-title">Yarny shop</h4>
+                  <h3 class="section-projects__list-item-title">Yarny shop</h3>
                   <p class="section-projects__list-item-text">e-commerce for pet’s clothes shop</p>
                   <img
                     src="/img/project3.png"
@@ -436,7 +495,7 @@
               </li>
               <li class="section-projects__list-item">
                 <a href="#" class="section-projects__list-item-link">
-                  <h4 class="section-projects__list-item-title">magic of goodness</h4>
+                  <h3 class="section-projects__list-item-title">magic of goodness</h3>
                   <p class="section-projects__list-item-text">
                     corporate website for charity foundation
                   </p>

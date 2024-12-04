@@ -1,18 +1,30 @@
 .skill-list {
   display: flex;
-  flex-basis: 30%;
+  align-items: flex-end;
   flex-wrap: wrap;
+  gap: 0;
+  position: relative;
+
+  @media screen and ($size-small) {
+    flex-basis: 55%;
+  }
 
   &__item {
+    height: 38px;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     &-button {
       color: $main-color;
-      padding: 16px 46px;
+      padding: 11px 23px;
       background-color: $bg-form-color;
       border-radius: 40px;
       border: 1px $main-color solid;
-      gap: 4px;
 
+      @media screen and ($size-small) {
+        padding: 16px 46px;
+      }
     }
   }
-
 }

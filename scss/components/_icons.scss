@@ -18,3 +18,9 @@
   position: relative;
   bottom: 5px;
 }
+
+.section-awareness__icon {
+  @media screen and ($size-xxlarge) {
+    width: 170px;
+  }
+}

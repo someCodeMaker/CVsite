@@ -1,28 +1,29 @@
 .title {
-  font-size: 80px;
-  margin-bottom: 140px;
+  font-size: 28px;
+  margin-bottom: 40px;
   font-weight: 500;
 
-  //tablet 768
   @media screen and ($size-tablet) {
-    font-size: 28px;
-  } //mobile
-  @media screen and ($size-mobile) {
-    font-size: 28px;
+    font-size: 7vw;
+  }
+  @media screen and ($size-small) {
+    font-size: 60px;
+  }
+  @media screen and ($size-normal) {
+    margin-bottom: 140px;
+  }
+  @media screen and ($size-large) {
+    font-size: 80px;
   }
 }
 
 .secondary-title {
   color: $bg-form-color;
-  font-size: 28px;
+  font-size: 20px;
   text-transform: uppercase;
   font-family: $text-font-medium;
 
-  //tablet 1024
-  @media screen and ($size-tablet) {
-    font-size: 20px;
-  } //tablet 1024
-  @media screen and ($size-mobile) {
-    font-size: 20px;
+  @media screen and ($size-small) {
+    font-size: 28px;
   }
 }

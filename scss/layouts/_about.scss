@@ -1,47 +1,83 @@
 .section-about {
-
   &__title {
     display: flex;
     flex-direction: column;
-    margin: 0 0 80px 50%;
+    margin-bottom: 50px;
     width: 50%;
+
+    @media screen and ($size-small) {
+      margin: 0 0 80px 50%;
+      width: 50%;
+    }
 
     &__bottom {
       display: flex;
       align-items: center;
       gap: 90px;
     }
-
   }
 
   &__text {
-    width: 25%;
+    width: 60%;
     margin-left: auto;
     margin-bottom: 70px;
+
+    @media screen and ($size-tablet) {
+      width: 35%;
+    }
+    @media screen and ($size-small) {
+      width: 35%;
+    }
+
+    @media screen and ($size-large) {
+      width: 25%;
+    }
   }
 
   &__skills-title {
-    margin-left: 50%;
-    width: 16%;
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 32px;
+    padding-right: 20px;
+
+    @media screen and ($size-normal) {
+      margin-right: 25%;
+    }
+    @media screen and ($size-large) {
+      margin-right: 30%;
+    }
+    @media screen and ($size-xlarge) {
+      margin-right: 36%;
+    }
   }
 
   &__skills-container {
     display: flex;
     justify-content: flex-end;
     border: 2px $main-color solid;
-    border-radius: 100px;
-    min-height: 370px;
+    border-radius: 50px;
+    min-height: 276px;
     position: relative;
 
+    @media screen and ($size-small) {
+      border-radius: 100px;
+      min-height: 370px;
+    }
 
     &-photo {
       position: absolute;
-      bottom: 0;
+      bottom: -5px;
       left: 0;
       width: 100%;
-      max-width: 760px;
-      max-height: 845px;
+      // min-width: 340px;
+      // max-width: 410px;
+      // border-radius: 0 0 50px 50px;
+
+      @media screen and ($size-small) {
+        transform: scale(0.9);
+        bottom: -48px;
+        left: -36px;
+      }
     }
   }
 }
