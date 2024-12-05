@@ -27,7 +27,7 @@
           <a class="section-header__contacts-link link" href="#" download>
             <span class="section-header__contacts-link-text">CV</span>
             <svg
-              class="download-icon"
+              class="download-icon icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -116,13 +116,7 @@
               <span class="section-about__title--first-line">About</span>
               <span class="section-about__title--second-line">
                 <span class="section-about__title--second-line-icon"
-                  >(<svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  >(<svg class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="./img/icons-sprite.svg#hand"></use></svg
                   >)</span
                 >
@@ -350,14 +344,19 @@
             <div class="section-awareness__line-top">
               <span class="section-awareness__line-top-text">
                 <span>if</span>
-                <span>
+                <span class="awareness-cirlce__container">
                   (
                   <span class="section-awareness__line-top-text--circle">
                     <!-- <svg class="circle-one">
                       <use href="./img/icons-sprite.svg#you"></use></svg> -->
                   </span>
 
-                  <span class="section-awareness__line-top-text--circle"></span>
+                  <span class="section-awareness__line-top-text--circle"
+                    ><p class="circle-text">
+                      if you are thinking about scaling your own business, are looking for new ways
+                      to attract customers, then order the development of your own website.
+                    </p></span
+                  >
                   )
                 </span>
                 <span> it'll</span>
@@ -378,28 +377,6 @@
               <span class="section-awareness__line-bottom--letter">s</span>
             </div>
           </div>
-          <!-- <h2 class="awareness-text">
-            <span class="awareness-text__block">
-              <span>if</span>
-              <span class="awareness-text__circles">
-                <span>(</span>
-                
-                <span>)</span>
-              </span>
-              <span>it'll</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="176"
-                height="256"
-                viewBox="0 0 176 256"
-                fill="none"
-                class="awareness-icon"
-              >
-                <use href="./img/icons-sprite.svg#arrow"></use>
-              </svg>
-            </span>
-            <span class="awareness-text__block">awareness</span>
-          </h2> -->
         </div>
       </section>
 
@@ -412,13 +389,7 @@
                 <span>projects</span>
                 <span class="section-projects__title-icon">
                   (
-                  <svg
-                    width="44"
-                    height="35"
-                    viewBox="0 0 44 35"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="./img/icons-sprite.svg#heart"></use>
                   </svg>
                   )
@@ -434,10 +405,15 @@
                   <p class="section-projects__list-item-text">
                     corporate website for modern furniture
                   </p>
-                  <img
-                    src="/img/project1.png"
-                    alt="case1"
-                    class="section-projects__list-item-img" />
+                  <picture>
+                    <source media="(max-width: 480px)" srcset="./img/project1_mobile.png" />
+                    <source media="(max-width: 1380px)" srcset="./img/project1_normal.png" />
+                    <source media="(min-width: 1381px)" srcset="./img/project1.png" />
+                    <img
+                      src="./img/project1.png"
+                      alt="case1"
+                      class="section-projects__list-item-img"
+                  /></picture>
                   <svg
                     class="section-projects__list-item-icon"
                     width="30"
@@ -455,11 +431,16 @@
                   <p class="section-projects__list-item-text">
                     landing page for announcing the event
                   </p>
-                  <img
-                    src="/img/project2.png"
-                    alt="case2"
-                    class="section-projects__list-item-img"
-                  />
+                  <picture>
+                    <source media="(max-width: 480px)" srcset="./img/project2_mobile.png" />
+                    <source media="(max-width: 1380px)" srcset="./img/project2_normal.png" />
+                    <source media="(min-width: 1381px)" srcset="./img/project2.png" />
+                    <img
+                      src="./img/project2.png"
+                      alt="case2"
+                      class="section-projects__list-item-img"
+                  /></picture>
+
                   <svg
                     class="section-projects__list-item-icon"
                     width="30"
@@ -476,11 +457,15 @@
                 <a href="#" class="section-projects__list-item-link">
                   <h3 class="section-projects__list-item-title">Yarny shop</h3>
                   <p class="section-projects__list-item-text">e-commerce for pet’s clothes shop</p>
-                  <img
-                    src="/img/project3.png"
-                    alt="case3"
-                    class="section-projects__list-item-img"
-                  />
+                  <picture>
+                    <source media="(max-width: 480px)" srcset="./img/project3_mobile.png" />
+                    <source media="(max-width: 1380px)" srcset="./img/project3_normal.png" />
+                    <source media="(min-width: 1381px)" srcset="./img/project3.png" />
+                    <img
+                      src="./img/project3.png"
+                      alt="case3"
+                      class="section-projects__list-item-img"
+                  /></picture>
                   <svg
                     class="section-projects__list-item-icon"
                     width="30"
@@ -499,10 +484,15 @@
                   <p class="section-projects__list-item-text">
                     corporate website for charity foundation
                   </p>
-                  <img
-                    src="/img/project4.png"
-                    alt="case4"
-                    class="section-projects__list-item-img" />
+                  <picture>
+                    <source media="(max-width: 480px)" srcset="./img/project4_mobile.png" />
+                    <source media="(max-width: 1380px)" srcset="./img/project4_normal.png" />
+                    <source media="(min-width: 1381px)" srcset="./img/project4.png" />
+                    <img
+                      src="./img/project4.png"
+                      alt="case4"
+                      class="section-projects__list-item-img"
+                  /></picture>
                   <svg
                     class="section-projects__list-item-icon"
                     width="30"
@@ -533,9 +523,7 @@
                     <span class="section-discussion__title-icon">
                       (
                       <svg
-                        width="30"
-                        height="42"
-                        viewBox="0 0 30 42"
+                        class="icon"
                         fill="none"
                         class="discussion-section--icon"
                         xmlns="http://www.w3.org/2000/svg"
@@ -551,14 +539,20 @@
                 </p>
               </div>
               <form action="POST" class="form">
-                <input type="text" name="name" id="name" placeholder="Name:" />
-                <input type="email" name="email" id="email" placeholder="Email:" />
-                <select id="subject" name="subject">
+                <input class="form-input" type="text" name="name" id="name" placeholder="Name:" />
+                <input
+                  class="form-input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email:"
+                />
+                <select class="form-input" id="subject" name="subject">
                   <option value="lending page">landing page</option>
                   <option value="e-commerce">e-commerce</option>
                   <option value="corporate website">corporate website</option>
                 </select>
-                <input type="button" value="submit" class="button" />
+                <input class="form-input form-button" type="button" value="submit" class="button" />
               </form>
             </div>
           </div>
@@ -605,13 +599,7 @@
               <li class="footer__contacts-list-item">
                 <a class="communication-link" href="mailto:denyshudzenkouk@gmail.com">
                   <span class="communication-icon">
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./img/icons-sprite.svg#email"></use>
                     </svg>
                   </span>
@@ -621,13 +609,7 @@
               <li class="footer__contacts-list-item">
                 <a class="communication-link" href="tel:+447871855007"
                   ><span class="communication-icon"
-                    ><svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    ><svg class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./img/icons-sprite.svg#phone"></use>
                     </svg> </span
                   >+447871855007</a
@@ -645,13 +627,7 @@
                   href="https://uk.linkedin.com/in/denys-hudzenko-690300135?trk=people-guest_people_search__card"
                 >
                   <span class="communication-icon">
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./img/icons-sprite.svg#linkedin"></use>
                     </svg>
                   </span>
@@ -661,13 +637,7 @@
               <li class="footer__contacts-list-item">
                 <a class="communication-link telegram" href="https://t.me/+380939505097&profile"
                   ><span class="communication-icon"
-                    ><svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    ><svg class="icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./img/icons-sprite.svg#telegram"></use>
                     </svg> </span
                   >+38(093)9505097</a

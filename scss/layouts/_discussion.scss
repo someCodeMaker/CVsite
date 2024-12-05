@@ -11,14 +11,14 @@
 
   @keyframes bounce {
     0% {
-      background-position: left -20px top 3%;
+      background-position: left top 3%;
     }
 
     50% {
-      background-position: left -20px top 0%;
+      background-position: left top 0%;
     }
     100% {
-      background-position: left -20px top 3%;
+      background-position: left top 3%;
     }
   }
 
@@ -43,28 +43,28 @@
     background-size: 40%;
     @keyframes bounce {
       0% {
-        background-position: left -20px top 20%;
+        background-position: left top 20%;
       }
 
       50% {
-        background-position: left -20px top 0%;
+        background-position: left top 0%;
       }
       100% {
-        background-position: left -20px top 20%;
+        background-position: left top 20%;
       }
     }
   }
   @media screen and ($size-xlarge) {
     @keyframes bounce {
       0% {
-        background-position: left -20px top;
+        background-position: left top;
       }
 
       50% {
         background-position: left bottom;
       }
       100% {
-        background-position: left -20px top;
+        background-position: left top;
       }
     }
   }

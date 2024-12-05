@@ -21,9 +21,21 @@
     justify-content: space-between;
 
     &-text {
+      .awareness-cirlce__container {
+        &:hover {
+          .section-awareness__line-top-text--circle:last-child {
+            background: $main-color;
+          }
+          .circle-text {
+            visibility: visible;
+            color: $secondary-text-color;
+            animation: circle_text 7s linear forwards;
+          }
+        }
+      }
       &--circle {
         display: inline-block;
-        width: 10vw;
+        width: 9vw;
         min-height: 170px;
         max-height: 170px;
         // height: 20vh;
@@ -49,8 +61,31 @@
 
         &:last-child {
           background-image: url("../../img/circle_2.png");
-          z-index: -1;
           margin-left: 5vw;
+          overflow: hidden;
+          position: relative;
+
+          .circle-text {
+            visibility: hidden;
+            position: absolute;
+            text-align: end;
+            font-family: $text-font;
+            text-transform: uppercase;
+            top: 35%;
+            left: 20%;
+            font-weight: 400;
+            font-size: 1vw;
+            width: 50%;
+          }
+
+          @keyframes circle_text {
+            0% {
+              transform: translateY(0%);
+            }
+            100% {
+              transform: translateY(-80%);
+            }
+          }
         }
       }
     }

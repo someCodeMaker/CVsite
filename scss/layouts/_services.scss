@@ -21,6 +21,9 @@
       border-radius: 50px;
       gap: 12px;
       background-color: $bg-form-color;
+      transition:
+        color 0.5s ease,
+        background-color 0.5s ease;
 
       @media screen and ($size-tablet) {
         width: 85vw;
@@ -37,6 +40,14 @@
       }
       @media screen and ($size-large) {
         max-height: 340px;
+      }
+
+      &:hover {
+        color: $bg-color;
+        background-color: $main-color;
+        .section-services__list-item--abstract {
+          transform: scale(1.05) translateY(-2%);
+        }
       }
 
       &-text {
@@ -113,6 +124,7 @@
         top: -15%;
         right: 0;
         width: 180px;
+        transition: transform 0.5s ease;
 
         @media screen and ($size-tablet) {
           right: 7%;
@@ -209,7 +221,7 @@
       &:last-child {
         .services-abstract {
           width: 200px;
-          left: 52%;
+          right: 0;
           top: -25%;
 
           @media screen and ($size-tablet) {
