@@ -1,0 +1,110 @@
+.modal-menu {
+  position: fixed;
+  z-index: 111;
+  top: 0;
+  left: 0;
+  background: $main-color;
+  transition:
+    transform 0.5s linear,
+    visibility 0s linear 0.5s;
+  transform: translateX(100vw);
+  visibility: hidden;
+
+  &__logo {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    top: 10px;
+    left: 10px;
+  }
+
+  &__button--close {
+    display: block;
+    margin-right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 112;
+    background-color: $form-text-color;
+    border: none;
+    position: relative;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 70%;
+      height: 2px;
+      transform: rotate(45deg);
+      top: 25px;
+      right: 7px;
+      z-index: 113;
+      background-color: #fff;
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__nav {
+    width: 100vw;
+    height: 100vh;
+    z-index: 112;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-list {
+      border-radius: 50px;
+      border: 2px solid $form-text-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: shadowMove 3s linear infinite;
+      // box-shadow: inset 16px 18px 42px 5px #a7ec51;
+      @keyframes shadowMove {
+        0% {
+          box-shadow: inset 7px 7px 21px -8px $form-text-color;
+        }
+        25% {
+          box-shadow: inset 7px -7px 21px -8px $form-text-color;
+        }
+        50% {
+          box-shadow: inset -7px -7px 21px -8px $form-text-color;
+        }
+        75% {
+          box-shadow: inset -7px 7px 21px -8px $form-text-color;
+        }
+        100% {
+          box-shadow: inset 7px 7px 21px -8px $form-text-color;
+        }
+      }
+
+      &-item {
+        padding: 10vw;
+      }
+    }
+    &-link {
+      color: $form-text-color;
+      font-size: 8vw;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.menu-open {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.5s linear;
+}
+.menu-closing {
+  transform: translateX(100vw);
+  visibility: hidden;
+  transition:
+    transform 0.5s linear,
+    visibility 0s linear 0.5s; /* Delay hiding */
+}

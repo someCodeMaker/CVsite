@@ -43,7 +43,7 @@
         </div>
 
         <!-- menu button -->
-        <button class="menu-button menu-button-open menu-button-close" onclick="menu()"></button>
+        <button class="menu-button menu-button-open"></button>
       </div>
     </header>
 
@@ -669,6 +669,32 @@
         <p><span class="footer--symbol-color">&#169;</span> All rights reserved.</p>
       </div>
     </footer>
-    <script src="/js/main.js"></script>
   </body>
+
+  <!-- modal menu -->
+  <section class="modal-menu">
+    <div class="modal-menu__logo">
+      <div class="section-header__nav-logo logo">
+        <img src="./img/logo_menu.svg" alt="logo" class="logo" />
+      </div>
+      <button type="button" class="modal-menu__button--close"></button>
+    </div>
+    <nav class="modal-menu__nav">
+      <ul class="modal-menu__nav-list">
+        <li class="modal-menu__nav-list-item">
+          <a href="" class="modal-menu__nav-link link">About Me</a>
+        </li>
+        <li class="modal-menu__nav-list-item">
+          <a href="" class="modal-menu__nav-link link">Services</a>
+        </li>
+        <li class="modal-menu__nav-list-item">
+          <a href="" class="modal-menu__nav-link link">Cases</a>
+        </li>
+        <li class="modal-menu__nav-list-item">
+          <a href="" class="modal-menu__nav-link link"> CV</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <script src="/js/main.js"></script>
 </html>
