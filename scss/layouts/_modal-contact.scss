@@ -1,0 +1,137 @@
+.modal-form {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: 30%;
+
+    @media screen and ($size-mobile) {
+      flex-basis: 80%;
+    }
+    @media screen and ($size-tablet) {
+      flex-basis: 60%;
+    }
+    @media screen and ($size-small) {
+      flex-basis: 50%;
+    }
+    @media screen and ($size-normal) {
+      flex-basis: 40%;
+    }
+    @media screen and ($size-large) {
+      flex-basis: 35vw;
+    }
+  }
+
+  &__input {
+    background-color: $bg-form-color;
+    color: $main-color;
+    font-size: 28px;
+    font-family: $text-font;
+    width: 100%;
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $bg-form-color inset;
+      -webkit-text-fill-color: $main-color;
+    }
+    option {
+      color: $main-color;
+    }
+  }
+
+  &__submit-button {
+    width: 100%;
+    background-color: $main-color;
+    font-size: 28px;
+    font-family: $text-font;
+    color: $secondary-text-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    @extend %form-button-border;
+  }
+
+  &-thanks {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: $secondary-text-color;
+    font-family: $title-font;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $main-color;
+    z-index: 222;
+    gap: 26px;
+    font-size: min(40px, 3vw);
+    font-weight: 400;
+    transition:
+      visibility 0.5s linear,
+      opacity 0.5s linear;
+
+    &__text:first-child {
+      font-size: min(200px, 10vw);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &__text--span {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      background: url("../../img/thank_you_abstract.png") no-repeat center 60% / contain;
+    }
+
+    &__button {
+      position: absolute;
+      bottom: min(246px, 10vh);
+      left: min(246px, 10vw);
+      background-color: $main-color;
+      display: flex;
+      align-items: center;
+      justify-self: flex-end;
+      align-self: flex-start;
+      font-size: 20px;
+      padding: 20px;
+      font-family: $text-font;
+      gap: 15px;
+      border: none;
+      cursor: pointer;
+      @extend %form-button-border;
+
+      &--icon {
+        width: 40px;
+        height: 30px;
+      }
+    }
+  }
+
+  .form-open-thanks {
+    opacity: 1;
+    visibility: visible;
+    transition:
+      visibility 0.5s linear,
+      opacity 0.5s linear;
+  }
+
+  .form-close-thanks {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      visibility 0.5s linear,
+      opacity 0.5s linear;
+  }
+}

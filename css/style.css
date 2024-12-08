@@ -31,6 +31,26 @@
   src: url(../../fonts/ArupalaGroteskTrial-SuperLt.ttf) format("truetype");
   font-weight: 300;
 }
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.modal-form-thanks__button:hover, .modal-form__submit-button:hover {
+  outline: 2px solid #2d3037;
+  background-color: #a7ec51;
+  border-bottom: 10px solid #2d3037;
+}
+.modal-form-thanks__button:focus, .modal-form__submit-button:focus {
+  background-color: #a7ec51;
+  outline: 2px solid #2d3037;
+}
+.modal-form-thanks__button:active, .modal-form__submit-button:active {
+  background-color: #a7ec51;
+  border-bottom: 1px solid #2d3037;
+  color: #2d3037;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -521,10 +541,11 @@ sup {
 }
 @media screen and (min-width: 769px) {
   .section-header__contacts-button {
-    padding: 10px 32px;
+    padding: 10px 22px;
+    font-size: 16px;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   .section-header__contacts-button {
     padding: 12px 38px;
   }
@@ -1067,8 +1088,8 @@ sup {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: textGradientAnimation 10s ease infinite;
-          animation: textGradientAnimation 10s ease infinite;
+  -webkit-animation: textGradientAnimation 20s ease infinite;
+          animation: textGradientAnimation 20s ease infinite;
 }
 @-webkit-keyframes textGradientAnimation {
   0% {
@@ -2263,7 +2284,7 @@ sup {
   color: #a7ec51;
 }
 
-.modal-menu {
+.modal {
   position: fixed;
   z-index: 111;
   top: 0;
@@ -2277,7 +2298,7 @@ sup {
           transform: translateX(100vw);
   visibility: hidden;
 }
-.modal-menu__logo {
+.modal__logo {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2292,18 +2313,22 @@ sup {
   top: 10px;
   left: 10px;
 }
-.modal-menu__button--close {
+.modal__button--close {
   display: block;
   margin-right: 30px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   z-index: 112;
-  background-color: #3c3d40;
+  background-color: #a7ec51;
+  outline: 1px solid #3c3d40;
   border: none;
   position: relative;
+  cursor: pointer;
+  -webkit-animation: shadowMove 3s linear infinite;
+          animation: shadowMove 3s linear infinite;
 }
-.modal-menu__button--close::before, .modal-menu__button--close::after {
+.modal__button--close::before, .modal__button--close::after {
   display: block;
   content: "";
   position: absolute;
@@ -2314,13 +2339,13 @@ sup {
   top: 25px;
   right: 7px;
   z-index: 113;
-  background-color: #fff;
+  background-color: #3c3d40;
 }
-.modal-menu__button--close::after {
+.modal__button--close::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-.modal-menu__nav {
+.modal .modal-menu__nav {
   width: 100vw;
   height: 100vh;
   z-index: 112;
@@ -2334,7 +2359,7 @@ sup {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.modal-menu__nav-list {
+.modal .modal-menu__nav-list {
   border-radius: 50px;
   border: 2px solid #3c3d40;
   display: -webkit-box;
@@ -2347,9 +2372,10 @@ sup {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
   -webkit-animation: shadowMove 3s linear infinite;
           animation: shadowMove 3s linear infinite;
 }
@@ -2397,17 +2423,23 @@ sup {
             box-shadow: inset 7px 7px 21px -8px #3c3d40;
   }
 }
-.modal-menu__nav-list-item {
-  padding: 10vw;
+.modal .modal-menu__nav-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10vh;
 }
-.modal-menu__nav-link {
+.modal .modal-menu__nav-link {
   color: #3c3d40;
-  font-size: 8vw;
+  font-size: 4vh;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.menu-open {
+.open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   visibility: visible;
@@ -2417,7 +2449,7 @@ sup {
   transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 }
 
-.menu-closing {
+.close {
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
   visibility: hidden;
@@ -2425,6 +2457,171 @@ sup {
   transition: visibility 0s linear 0.5s, -webkit-transform 0.5s linear;
   transition: transform 0.5s linear, visibility 0s linear 0.5s;
   transition: transform 0.5s linear, visibility 0s linear 0.5s, -webkit-transform 0.5s linear; /* Delay hiding */
+}
+
+.modal-form {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal-form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+@media screen and (max-width: 480px) {
+  .modal-form__container {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+}
+@media screen and (min-width: 481px) {
+  .modal-form__container {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .modal-form__container {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .modal-form__container {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .modal-form__container {
+    -ms-flex-preferred-size: 35vw;
+        flex-basis: 35vw;
+  }
+}
+.modal-form__input {
+  background-color: #2d3037;
+  color: #a7ec51;
+  font-size: 28px;
+  font-family: "Space Grotesk light";
+  width: 100%;
+}
+.modal-form__input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #2d3037 inset;
+  -webkit-text-fill-color: #a7ec51;
+}
+.modal-form__input option {
+  color: #a7ec51;
+}
+.modal-form__submit-button {
+  width: 100%;
+  background-color: #a7ec51;
+  font-size: 28px;
+  font-family: "Space Grotesk light";
+  color: #212226;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+}
+.modal-form-thanks {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: #212226;
+  font-family: "Arupala Grotesk";
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #a7ec51;
+  z-index: 222;
+  gap: 26px;
+  font-size: min(40px, 3vw);
+  font-weight: 400;
+  -webkit-transition: visibility 0.5s linear, opacity 0.5s linear;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+}
+.modal-form-thanks__text:first-child {
+  font-size: min(200px, 10vw);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.modal-form-thanks__text--span {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: url("../../img/thank_you_abstract.png") no-repeat center 60%/contain;
+}
+.modal-form-thanks__button {
+  position: absolute;
+  bottom: min(246px, 10vh);
+  left: min(246px, 10vw);
+  background-color: #a7ec51;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 20px;
+  padding: 20px;
+  font-family: "Space Grotesk light";
+  gap: 15px;
+  border: none;
+  cursor: pointer;
+}
+.modal-form-thanks__button--icon {
+  width: 40px;
+  height: 30px;
+}
+.modal-form .form-open-thanks {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: visibility 0.5s linear, opacity 0.5s linear;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+}
+.modal-form .form-close-thanks {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0.5s linear, opacity 0.5s linear;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
 }
 
 @media screen and (max-width: 480px) {

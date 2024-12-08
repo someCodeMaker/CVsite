@@ -80,10 +80,11 @@
       font-weight: normal;
 
       @media screen and ($size-small) {
-        padding: 10px 32px;
+        padding: 10px 22px;
+        font-size: 16px;
       }
 
-      @media screen and ($size-small) {
+      @media screen and ($size-normal) {
         padding: 12px 38px;
       }
 

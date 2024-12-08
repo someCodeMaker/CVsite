@@ -37,7 +37,7 @@
             </svg>
           </a>
 
-          <button class="section-header__contacts-button button" id="menu-button">
+          <button class="section-header__contacts-button button form-open-button">
             Contact Me
           </button>
         </div>
@@ -97,7 +97,7 @@
                   power of innovation and an unbridled passion for coding. I’m driven to not just
                   meet but exceed client’s expectation.
                 </p>
-                <button class="section-hero__bottom-container--button button">
+                <button class="form-open-button section-hero__bottom-container--button button">
                   GET A CONSULTATION
                 </button>
               </div>
@@ -332,7 +332,9 @@
               </li>
             </ul>
 
-            <button class="section-services__button button">discuss your project</button>
+            <button class="section-services__button button form-open-button">
+              discuss your project
+            </button>
           </div>
         </div>
       </section>
@@ -352,10 +354,10 @@
                   </span>
 
                   <span class="section-awareness__line-top-text--circle"
-                    ><p class="circle-text">
+                    ><span class="circle-text">
                       if you are thinking about scaling your own business, are looking for new ways
                       to attract customers, then order the development of your own website.
-                    </p></span
+                    </span></span
                   >
                   )
                 </span>
@@ -511,7 +513,7 @@
       </section>
 
       <!-- Discussion -->
-      <section class="discussion section--margin-bottom" id="discussion " style="display: flex">
+      <section class="discussion section--margin-bottom" id="discussion" style="display: flex">
         <div class="container">
           <div class="section-discussion">
             <div class="section-discussion__container">
@@ -523,9 +525,8 @@
                     <span class="section-discussion__title-icon">
                       (
                       <svg
-                        class="icon"
                         fill="none"
-                        class="discussion-section--icon"
+                        class="discussion-section--icon icon"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <use href="./img/icons-sprite.svg#lamp"></use>
@@ -552,7 +553,7 @@
                   <option value="e-commerce">e-commerce</option>
                   <option value="corporate website">corporate website</option>
                 </select>
-                <input class="form-input form-button" type="button" value="submit" class="button" />
+                <input class="form-input form-button button" type="button" value="submit" />
               </form>
             </div>
           </div>
@@ -594,7 +595,7 @@
 
         <address class="footer__contacts">
           <div class="footer__contacts-container">
-            <h3 class="footer__contacts-title">Contacts:</h3>
+            <p class="footer__contacts-title">Contacts:</p>
             <ul class="footer__contacts-list">
               <li class="footer__contacts-list-item">
                 <a class="communication-link" href="mailto:denyshudzenkouk@gmail.com">
@@ -619,7 +620,7 @@
           </div>
 
           <div class="footer__contacts-container">
-            <h3 class="footer__contacts-title">Social media:</h3>
+            <p class="footer__contacts-title">Social media:</p>
             <ul class="footer__contacts-list">
               <li class="footer__contacts-list-item">
                 <a
@@ -669,32 +670,84 @@
         <p><span class="footer--symbol-color">&#169;</span> All rights reserved.</p>
       </div>
     </footer>
-  </body>
 
-  <!-- modal menu -->
-  <section class="modal-menu">
-    <div class="modal-menu__logo">
-      <div class="section-header__nav-logo logo">
-        <img src="./img/logo_menu.svg" alt="logo" class="logo" />
+    <!-- modal menu -->
+    <section class="modal modal-menu">
+      <div class="modal__logo">
+        <div>
+          <img src="./img/logo_menu.svg" alt="logo" class="logo" />
+        </div>
+        <button type="button" class="modal__button--close modal-menu__button"></button>
       </div>
-      <button type="button" class="modal-menu__button--close"></button>
-    </div>
-    <nav class="modal-menu__nav">
-      <ul class="modal-menu__nav-list">
-        <li class="modal-menu__nav-list-item">
-          <a href="" class="modal-menu__nav-link link">About Me</a>
-        </li>
-        <li class="modal-menu__nav-list-item">
-          <a href="" class="modal-menu__nav-link link">Services</a>
-        </li>
-        <li class="modal-menu__nav-list-item">
-          <a href="" class="modal-menu__nav-link link">Cases</a>
-        </li>
-        <li class="modal-menu__nav-list-item">
-          <a href="" class="modal-menu__nav-link link"> CV</a>
-        </li>
-      </ul>
-    </nav>
-  </section>
-  <script src="/js/main.js"></script>
+      <nav class="modal-menu__nav">
+        <ul class="modal-menu__nav-list">
+          <li class="modal-menu__nav-list-item">
+            <a href="#about" class="modal-menu__nav-link link">About Me</a>
+          </li>
+          <li class="modal-menu__nav-list-item">
+            <a href="#services" class="modal-menu__nav-link link">Services</a>
+          </li>
+          <li class="modal-menu__nav-list-item">
+            <a href="#projects" class="modal-menu__nav-link link">Cases</a>
+          </li>
+          <li class="modal-menu__nav-list-item">
+            <a href="#" class="modal-menu__nav-link link"> CV</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- modal form -->
+    <section class="modal modal-form">
+      <div class="modal__logo">
+        <div>
+          <img src="./img/logo_menu.svg" alt="logo" class="logo" />
+        </div>
+        <button type="button" class="modal__button--close modal-form__button--close"></button>
+      </div>
+
+      <form action="POST" class="form modal-form__container">
+        <label for="modal-form-name"></label>
+        <input
+          class="modal-form__input form-input"
+          type="text"
+          name="name"
+          id="modal-form-name"
+          placeholder="Name:"
+        />
+        <label for="modal-form-email"></label>
+        <input
+          class="modal-form__input form-input"
+          type="email"
+          name="email"
+          id="modal-form-email"
+          placeholder="Email:"
+        />
+        <label for="modal-form-select"></label>
+        <select class="modal-form__input form-input" id="modal-form-select" name="select">
+          <option value="lending page">landing page</option>
+          <option value="e-commerce">e-commerce</option>
+          <option value="corporate website">corporate website</option>
+        </select>
+        <input class="modal-form__submit-button" type="button" value="submit" id="modal-form-btn" />
+      </form>
+      <div class="modal-form-thanks">
+        <p class="modal-form-thanks__text">
+          thank
+          <span> y<span class="modal-form-thanks__text--span">o</span>u!</span>
+        </p>
+        <p class="modal-form-thanks__text">I will contact you as soon as possible</p>
+        <button class="modal-form-thanks__button button">
+          <img
+            class="modal-form-thanks__button--icon"
+            src="./img/thanks_arrow_back.svg"
+            alt="arrow"
+          />
+
+          go back
+        </button>
+      </div>
+    </section>
+    <script src="/js/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,24 @@
+@mixin border-gradient($blur, $border, $colors...) {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -$border;
+    background: conic-gradient(from var(--gradient-angle), $colors...);
+    border-radius: inherit;
+    animation: border-rotation 10s linear infinite;
+    z-index: -1;
+  }
+  &::after {
+    filter: blur($blur);
+  }
+
+  @keyframes border-rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+}
