@@ -31,11 +31,6 @@
   src: url(../../fonts/ArupalaGroteskTrial-SuperLt.ttf) format("truetype");
   font-weight: 300;
 }
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 .modal-form-thanks__button:hover, .modal-form__submit-button:hover {
   outline: 2px solid #2d3037;
   background-color: #a7ec51;
@@ -51,6 +46,11 @@
   color: #2d3037;
 }
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2529,8 +2529,14 @@ sup {
 .modal-form__input option {
   color: #a7ec51;
 }
+@media screen and (max-width: 480px) {
+  .modal-form__input {
+    font-size: 20px;
+  }
+}
 .modal-form__submit-button {
   width: 100%;
+  height: min(90px, 20vw);
   background-color: #a7ec51;
   font-size: 28px;
   font-family: "Space Grotesk light";
@@ -2540,6 +2546,13 @@ sup {
   padding: 20px;
   border-radius: 30px;
   border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .modal-form__submit-button {
+    font-size: 20px;
+  }
 }
 .modal-form-thanks {
   opacity: 0;

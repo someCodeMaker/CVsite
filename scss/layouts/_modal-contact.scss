@@ -42,10 +42,14 @@
     option {
       color: $main-color;
     }
+    @media screen and ($size-mobile) {
+      font-size: 20px;
+    }
   }
 
   &__submit-button {
     width: 100%;
+    height: min(90px, 20vw);
     background-color: $main-color;
     font-size: 28px;
     font-family: $text-font;
@@ -55,7 +59,13 @@
     padding: 20px;
     border-radius: 30px;
     border: none;
+    margin-top: 10px;
     @extend %form-button-border;
+    cursor: pointer;
+
+    @media screen and ($size-mobile) {
+      font-size: 20px;
+    }
   }
 
   &-thanks {

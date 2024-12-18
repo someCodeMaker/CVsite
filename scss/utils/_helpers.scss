@@ -1,9 +1,3 @@
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 // border for module form buttons
 %form-button-border {
   &:hover {
